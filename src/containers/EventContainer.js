@@ -46,10 +46,37 @@ const EventContainer = () => {
     
     // filterEvents(1)
 
+ 
+
+    
+
+        const handleEvent = ({event, id}) => {
+            
+            return( 
+                
+                <div>
+  
+                "hi"
+                <p className="id">{id}</p>
+                <p className="description">{event.eventDescription}</p>
+                <p className="startTime">{event.startTime}</p>
+                <p className="endTime">{event.endTime}</p>
+                <p className="date">{event.date}</p>
+                <p className="capacity">{event.capacity}</p>
+                </div>
+    
+            )
+        }
+
     return (
        <>
-       <EventList events={events}/>
-
+       <EventList events={events} handleEvent={handleEvent}/>
+       <button 
+                onClick={handleEvent}>
+              
+                {/* <Link to={`/events/${event.id}`}>Show</Link> */}
+            </button>
+            {/* <p className="eventName">{event.eventName}</p> */}
        </>
 
 
