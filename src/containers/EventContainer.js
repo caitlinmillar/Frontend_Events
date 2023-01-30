@@ -17,24 +17,32 @@ const EventContainer = () => {
         .catch((err) => setError(err.message))
     }, [])
 
-    useEffect((id) => {
-        fetch(`http://localhost:8080/events/` + id,{
-            method: "GET",
-            headers: {'Content-Type': 'application/json'}
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            let results = [];
-            response.results.forEach((event) => {
-                this.events(event.id, event)
-                this.setEvents({events})
-                results.push(event)
-            })
-        })
+    // useEffect((id) => {
+    //     fetch(`http://localhost:8080/events/` + id,{
+    //         method: "GET",
+    //         headers: {'Content-Type': 'application/json'}
+    //     })
+    //     .then((response) => response.json())
+    //     .then((response) => {
+    //         let results = [];
+    //         response.results.forEach((event) => {
+    //             this.events(event.id, event)
+    //             this.setEvents({events})
+    //             results.push(event)
+    //         })
+    //     })
       
-        .catch((err) => setError(err.message))
-        console.log({events});
-    }, [])
+    //     .catch((err) => setError(err.message))
+    //     console.log({events});
+    // }, [])
+
+    const filterEvents = (id) => {
+        fetch(`http://localhost:8080/events/` + id)
+        .then((response) => response.json())
+        .then((response) => setEvents(response))
+        };
+    
+    // filterEvents(1)
 
 
     return (
@@ -45,6 +53,6 @@ const EventContainer = () => {
 
      
     )
-}
+    }  
 
 export default EventContainer;
