@@ -18,15 +18,7 @@ const EventContainer = () => {
     }, [])
 
     return (
-        <BrowserRouter>
-
-            <Link to="">Home</Link>
-
-            <Routes>
-                <Route path="" element={<EventList events={events}/>} />
-            </Routes>
-        <h1></h1>
-        </BrowserRouter>
+       <></>
 
 
      
