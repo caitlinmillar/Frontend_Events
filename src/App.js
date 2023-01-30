@@ -13,9 +13,8 @@ function App() {
     {/* <Link to="/user">Profile</Link> */}
     
     <Routes>
-        <EventContainer>
-            <Route path=""/>
-        </EventContainer>
+            <Route path="" element={<EventContainer/>} />
+
 {/* 
         <UserContainer>
             <Route path="/user" component={users}/>
