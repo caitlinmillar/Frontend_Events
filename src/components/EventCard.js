@@ -1,14 +1,17 @@
 import { useState } from "react"
 import Event from "./Event"
 
-const EventCard = ({ event }) => {
+const EventCard = ({ eventName, eventDescription }) => {
     
     // console.log(eventComponents)
 
 
     return(
         <>
-        {event}
+            {eventName}
+            {eventDescription}
         </>
     )
 }
+
+export default EventCard;

@@ -1,9 +1,9 @@
-import Event from "./Event";
+import EventCard from "./Event";
 
 const EventList = ({ events }) => {
 
-    const eventComponents = events.map((event) => {
-        return <Event event = {event} key={event.id}/>
+    const eventComponents = events.map((event, id) => {
+        return <EventCard event = {event} key={id} name = {event.eventName}/>
     })
 
     return (

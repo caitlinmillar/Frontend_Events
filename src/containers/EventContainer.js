@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import EventList from "../components/EventList";
+import Event from "../components/Event";
+import EventCard from "../components/EventCard";
 
 
 const EventContainer = () => {
@@ -36,18 +38,18 @@ const EventContainer = () => {
     //     console.log({events});
     // }, [])
 
-    const filterEvents = (id) => {
-        fetch(`http://localhost:8080/events/` + id)
-        .then((response) => response.json())
-        .then((response) => setEvents(response))
-        };
+    // const filterEvents = (id) => {
+    //     fetch(`http://localhost:8080/events/` + id)
+    //     .then((response) => response.json())
+    //     .then((response) => setEvents(response))
+    //     };
     
     // filterEvents(1)
-
 
     return (
        <>
        <EventList events={events}/>
+
        </>
 
 
