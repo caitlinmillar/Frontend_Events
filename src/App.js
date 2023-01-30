@@ -14,6 +14,7 @@ function App() {
     
     <Routes>
             <Route path="" element={<EventContainer/>} />
+            <Route path="/events/:id" element={<EventContainer/>} />
 
 {/* 
         <UserContainer>
