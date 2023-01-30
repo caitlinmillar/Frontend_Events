@@ -19,68 +19,11 @@ const EventContainer = () => {
         .catch((err) => setError(err.message))
     }, [])
 
-    // useEffect((id) => {
-    //     fetch(`http://localhost:8080/events/` + id,{
-    //         method: "GET",
-    //         headers: {'Content-Type': 'application/json'}
-    //     })
-    //     .then((response) => response.json())
-    //     .then((response) => {
-    //         let results = [];
-    //         response.results.forEach((event) => {
-    //             this.events(event.id, event)
-    //             this.setEvents({events})
-    //             results.push(event)
-    //         })
-    //     })
-      
-    //     .catch((err) => setError(err.message))
-    //     console.log({events});
-    // }, [])
-
-    // const filterEvents = (id) => {
-    //     fetch(`http://localhost:8080/events/` + id)
-    //     .then((response) => response.json())
-    //     .then((response) => setEvents(response))
-    //     };
-    
-    // filterEvents(1)
-
- 
-
-    
-
-        const handleEvent = ({event, id}) => {
-            
-            return( 
-                
-                <div>
-  
-                "hi"
-                <p className="id">{id}</p>
-                <p className="description">{event.eventDescription}</p>
-                <p className="startTime">{event.startTime}</p>
-                <p className="endTime">{event.endTime}</p>
-                <p className="date">{event.date}</p>
-                <p className="capacity">{event.capacity}</p>
-                </div>
-    
-            )
-        }
-
+       
     return (
        <>
-       <EventList events={events} handleEvent={handleEvent}/>
-       <button 
-                onClick={handleEvent}>
-              
-                {/* <Link to={`/events/${event.id}`}>Show</Link> */}
-            </button>
-            {/* <p className="eventName">{event.eventName}</p> */}
-       </>
-
-
-     
+       <EventList events={events} />
+       </>  
     )
     }  
 
