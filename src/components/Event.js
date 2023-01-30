@@ -3,17 +3,21 @@ import { Link } from "react-router-dom";
 const Event = ({event, id}) => {
 
     const handleEvent = () => {
-        return (
+        return(
+            
             <div>
+            "hi"
             <p className="id">{id}</p>
-            <p className="eventDescription">{event.eventDescription}</p>
+            <p className="description">{event.eventDescription}</p>
             <p className="startTime">{event.startTime}</p>
             <p className="endTime">{event.endTime}</p>
             <p className="date">{event.date}</p>
             <p className="capacity">{event.capacity}</p>
             </div>
-        )}
-    
+
+        )
+    }
+
     return(
         <div className="Event">
             <button 
