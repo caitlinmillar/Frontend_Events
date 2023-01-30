@@ -19,11 +19,10 @@ const EventContainer = () => {
         .catch((err) => setError(err.message))
     }, [])
 
-       
     return (
        <>
        <EventList events={events} />
-       </>  
+       </>
     )
     }  
 

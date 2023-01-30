@@ -5,19 +5,19 @@ const Footer = () => {
             <p>©2023 Whale of a time</p>
             <ul>
                 <li>
-                    <href>Terms & Conditions</href>
+                    <a href="#">Terms & Conditions</ a>
                 </li>
                 <li>
-                    <href>FAQs</href>
+                    <a href="#">FAQs</a>
                 </li>
                 <li>
-                    <href>Contact Us</href>
+                    <a href="#">Contact U</a>
                 </li>
                 <li>
-                    <href>Cookies</href>
+                    <a href="#">Cookies</a>
                 </li>
                 <li>
-                    <href>Privacy</href>
+                    <a href="#">Privacy</a>
                 </li>
             </ul>
         </div>
