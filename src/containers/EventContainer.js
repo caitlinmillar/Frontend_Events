@@ -18,7 +18,7 @@ const EventContainer = () => {
     }, [])
 
     useEffect((id) => {
-        fetch(`http://localhost:8080/events/1`,{
+        fetch(`http://localhost:8080/events/` + id,{
             method: "GET",
             headers: {'Content-Type': 'application/json'}
         })
@@ -28,6 +28,7 @@ const EventContainer = () => {
             response.results.forEach((event) => {
                 this.events(event.id, event)
                 this.setEvents({events})
+                results.push(event)
             })
         })
       
