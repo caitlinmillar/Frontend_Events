@@ -17,9 +17,9 @@ function App() {
     <>
     <NavBar/>
     <Featured className="Featured"/>
-    <CarouselList/>
+    
     <Routes>
-            <Route path="" element={<EventContainer/>} />
+            <Route path="" element={<><EventContainer/><CarouselList/></>} />
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
 
     </Routes>
