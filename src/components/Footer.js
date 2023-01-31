@@ -1,5 +1,6 @@
 
 const Footer = () => {
+    
     return ( 
         <div className="footer">
             <p>©2023 Whale of a time</p>
@@ -10,6 +11,9 @@ const Footer = () => {
                     <a href="#">Cookies</a>
                     <a href="#">Privacy</a>
             </ul>
+
+        <p className="copyright"> © 2023 Whale of a time</p>
+
         </div>
      );
 }

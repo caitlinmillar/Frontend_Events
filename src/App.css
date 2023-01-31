@@ -64,29 +64,46 @@ object-position: 25% 70%;
   }
 }
 
-/* Event Card */
-.eventCardName {
-  font-size: 70px;
-  margin-left: 30px;
-  margin-bottom: 0;
-
-}
-
-.description {
-  margin-left: 30px;
-  margin-bottom: 0;
-}
+/* =========== Event Card =======================*/
 .eventImage {
   display: flex;
   border: 15px solid rgb(50, 86, 155);
 }
 
+.eventCardName {
+  font-size: 70px;
+  margin-left: 30px;
+  /* margin-bottom: 30px; */
+}
+
+.description {
+  margin-left: 30px;
+}
+
 .leftChild {
   display: inline-block;
-  border: 0px solid rgb(50, 86, 155);
+  border: 3px solid rgb(50, 86, 155);
   padding: 50px;
-  margin-left: 30px;
+  margin: 30px;
   vertical-align: middle;
+  border-radius: 15px;
+
   /* text-align: center; */
+}
+
+.getTicketsButton {
+  background-color: #4894ea;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.getTicketsButton:hover {
+  background-color:rgb(50, 86, 155);
+  transition: 0.2s;
 }
 
