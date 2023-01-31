@@ -13,10 +13,10 @@ function App() {
   return (
     <BrowserRouter>
     <NavBar/>
-    <Featured className="Featured"/>
     
     <Routes>
-            <Route path="" element={<EventContainer/>} />
+            <Route path="" element={<><Featured className="Featured"/><EventContainer/></>} />
+            
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
 
     </Routes>
