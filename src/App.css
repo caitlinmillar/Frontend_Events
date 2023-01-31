@@ -25,6 +25,10 @@ object-position: 25% 70%;
   object-fit:contain; 
 }
 
+.logo:hover {
+  color: #000;
+}
+
 .App {
   text-align: center;
 }
