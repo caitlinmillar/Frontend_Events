@@ -24,8 +24,6 @@ function App() {
             <Route path="" element={<><EventContainer/><CarouselList/></>} />
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
             <Route path="/users" element={<UserContainer/>}/>
-            <Route path="/users/:id" element={<ChosenUserContainer/>} />
-
     </Routes>
     <Footer/>
     </>

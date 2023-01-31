@@ -15,22 +15,41 @@ object-position: 25% 70%;
   justify-content: space-evenly;
 }
 
-.header {
-  display: flexbox;
-  justify-content: space-between;
+.navbar {
+  display: flex;
+  height: 60px;
   background-color: #4894ea;
+  max-width: 100%;
+  padding: 1rem;
+  align-items:center;
+  position: relative;
 }
 .logo {
-  width: 200px; 
-  object-fit:contain; 
+  width: 150px; 
+  height: 75px;
+  object-position: 0;
+  object-fit: cover; 
+  display: block;
+  margin: auto;
+  
 }
+
 
 .logo:hover {
-  color: #000;
+  transform: scale(1.1);
+  transition: 0.1s;
 }
 
-.App {
-  text-align: center;
+.show-btn {
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+.eventImage {
+  width: 100%; 
+height: 400px; 
+object-fit: cover;
+object-position: 25% 70%; 
 }
 
 
@@ -40,7 +59,7 @@ object-position: 25% 70%;
   }
 }
 
-.App-header {
+.app {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
