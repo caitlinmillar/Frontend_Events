@@ -22,7 +22,7 @@ const EventContainer = () => {
 
     return (
        <>
-       <EventList events={events} />
+       {/* <EventList events={events} /> */}
        <Spotlight events={events}/>
        </>
     )

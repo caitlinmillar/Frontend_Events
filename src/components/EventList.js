@@ -12,7 +12,6 @@ const EventList = ({ events, handleEvent}) => {
     return (
         <>
         {eventComponents}
-        <Spotlight eventComponents={eventComponents} /> 
         </>
     )
 }
