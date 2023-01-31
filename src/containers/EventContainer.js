@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import EventList from "../components/EventList";
 import Event from "../components/Event";
 import EventCard from "../components/EventCard";
+import Spotlight from "../components/Spotlight";
 
 
 const EventContainer = () => {
@@ -22,7 +23,7 @@ const EventContainer = () => {
     return (
        <>
        <EventList events={events} />
-       
+       <Spotlight events={events}/>
        </>
     )
     }  

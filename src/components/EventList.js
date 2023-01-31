@@ -4,19 +4,15 @@ import Spotlight from "./Spotlight";
 const EventList = ({ events, handleEvent}) => {
 
     const eventComponents = events.map((event, id) => {
-        return 
-        <>
-        <Event event = {event} key={id} name = {event.eventName}/>
-        <Spotlight event= {event} key={id} /> 
-        </>
-
+        return <Event event = {event} key={id} name = {event.eventName}/>
     })
-
-
-
+    
+    
+    
     return (
         <>
         {eventComponents}
+        <Spotlight eventComponents={eventComponents} /> 
         </>
     )
 }
