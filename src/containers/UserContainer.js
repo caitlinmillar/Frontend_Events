@@ -31,7 +31,7 @@ const UserContainer = () => {
 
 
     // Might want to create an update user information - that will have to go in the ChosenUserContainer
-
+    // Possible extension
 
     return ( 
         <>

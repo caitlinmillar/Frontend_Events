@@ -7,22 +7,26 @@ import Featured from './components/Featured';
 import NavBar from './components/NavBar';
 import ExpandingList from './components/ExpandingList';
 import UserContainer from './containers/UserContainer';
+import ChosenUserContainer from './containers/ChosenUserContainer';
+import { Carousel } from 'antd';
+import CarouselList from './components/CarouselList';
 
 function App() {
 
 
   return (
-    <BrowserRouter className="App">
-    <NavBar className="navbar"/>
-    {/* <ExpandingList /> */}
+    <BrowserRouter>
+    <>
+    <NavBar/>
+    <Featured className="Featured"/>
     
     <Routes>
-            <Route path="" element={<><Featured className="Featured"/><EventContainer/></>} />
-            
+            <Route path="" element={<><EventContainer/><CarouselList/></>} />
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
             <Route path="/users" element={<UserContainer/>}/>
     </Routes>
     <Footer/>
+    </>
 </BrowserRouter>
   );
 }
