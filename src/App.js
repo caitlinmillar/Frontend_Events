@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ChosenEventContainer from './containers/ChosenEventContainer';
 import Footer from './components/Footer';
 import Featured from './components/Featured';
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -11,8 +12,7 @@ function App() {
 
   return (
     <BrowserRouter>
-
-    <Link to="">Home</Link>
+    <NavBar/>
     <Featured className="Featured"/>
     
     <Routes>
