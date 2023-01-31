@@ -1,6 +1,6 @@
 .Featured img {
   width: 100%;
-  
+
 }
 
 .carousel-events {
@@ -9,14 +9,15 @@
   justify-content: space-evenly;
 }
 
+.logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
