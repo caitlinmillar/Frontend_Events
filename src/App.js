@@ -5,6 +5,7 @@ import ChosenEventContainer from './containers/ChosenEventContainer';
 import Footer from './components/Footer';
 import Featured from './components/Featured';
 import NavBar from './components/NavBar';
+import ExpandingList from './components/ExpandingList';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
     <NavBar/>
+    <ExpandingList/>
     <Featured className="Featured"/>
     
     <Routes>
