@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link, useLocation, useParams } from "react-router-dom";
-
+import carShow from "./eventImages/carshow.jpg"
 
 
 const ChosenEventContainer = () => {
@@ -27,7 +27,7 @@ const ChosenEventContainer = () => {
                 <p className="eventName">{event.eventName}</p>
             </div>
             <div className="eventImage">
-                <img src="./src/assets/carshow.jpg" alt="car show image"/>
+                <img src={carShow} alt="car show image"/>
             </div>
             <div className="leftChild">
                 <p className="date">{event.date}</p>

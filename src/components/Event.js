@@ -1,18 +1,16 @@
 import { Link } from "react-router-dom";
 
-const Event = ({event, id}) => {
 
-   
+const Event = ({event, id}) => (
+    <div className="Event">
+        <button>
+            <Link className="show-btn" to={`/events/${event.id}`}>show
+                {/* <img src={carshow} className="logo" alt="event image"/> */}
+            </Link>
+        </button>
+        <p className="eventName">{event.eventName}</p>
 
-    return(
-        <div className="Event">
-            <button>
-                <Link to={`/events/${event.id}`}>Show</Link>
-            </button>
-            <p className="eventName">{event.eventName}</p>
-           
-        </div>
-    )
-}
+    </div>
+)
 
 export default Event;

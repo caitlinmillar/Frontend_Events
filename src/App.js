@@ -7,14 +7,13 @@ import Featured from './components/Featured';
 import NavBar from './components/NavBar';
 import ExpandingList from './components/ExpandingList';
 import UserContainer from './containers/UserContainer';
-import ChosenUserContainer from './containers/ChosenUserContainer';
 
 function App() {
 
 
   return (
-    <BrowserRouter>
-    <NavBar/>
+    <BrowserRouter className="App">
+    <NavBar className="navbar"/>
     {/* <ExpandingList /> */}
     
     <Routes>
@@ -22,8 +21,6 @@ function App() {
             
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
             <Route path="/users" element={<UserContainer/>}/>
-            <Route path="/users/:id" element={<ChosenUserContainer/>} />
-
     </Routes>
     <Footer/>
 </BrowserRouter>
