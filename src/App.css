@@ -1,7 +1,12 @@
 .Featured img {
-  height: 40vmin;
+  width: 100%;
 }
 
+.carousel-events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
 .App {
   text-align: center;

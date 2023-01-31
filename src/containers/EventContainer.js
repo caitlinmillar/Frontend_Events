@@ -21,10 +21,10 @@ const EventContainer = () => {
     }, [])
 
     return (
-       <>
-       {/* <EventList events={events} /> */}
-       <Spotlight events={events}/>
-       </>
+       <div className="carousel-events">
+       <EventList events={events} />
+       {/* <Spotlight events={events}/> */}
+       </div>
     )
     }  
 
