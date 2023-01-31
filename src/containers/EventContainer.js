@@ -22,6 +22,7 @@ const EventContainer = () => {
     return (
        <>
        <EventList events={events} />
+       
        </>
     )
     }  
