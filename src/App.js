@@ -8,15 +8,18 @@ import NavBar from './components/NavBar';
 import ExpandingList from './components/ExpandingList';
 import UserContainer from './containers/UserContainer';
 import ChosenUserContainer from './containers/ChosenUserContainer';
+import { Carousel } from 'antd';
+import CarouselList from './components/CarouselList';
 
 function App() {
 
 
   return (
     <BrowserRouter>
+    <>
     <NavBar/>
-    {/* <ExpandingList /> */}
-    
+    <Featured className="Featured"/>
+    <CarouselList/>
     <Routes>
             <Route path="" element={<><Featured className="Featured"/><EventContainer/></>} />
             
@@ -26,6 +29,7 @@ function App() {
 
     </Routes>
     <Footer/>
+    </>
 </BrowserRouter>
   );
 }
