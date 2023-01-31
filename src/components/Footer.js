@@ -1,9 +1,10 @@
 
 const Footer = () => {
+    
     return ( 
-        <div className="footer">
-            <p>©2023 Whale of a time</p>
-            <ul className="footerLinks">
+        <div>
+            <ul className="footerLinks"> 
+            <h2>Quick Links</h2>
                 <li>
                     <a href="#">Terms & Conditions</ a>
                 </li>
@@ -20,6 +21,9 @@ const Footer = () => {
                     <a href="#">Privacy</a>
                 </li>
             </ul>
+
+        <p className="copyright"> © 2023 Whale of a time</p>
+
         </div>
      );
 }

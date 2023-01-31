@@ -107,21 +107,3 @@ object-position: 25% 70%;
   transition: 0.2s;
 }
 
-
-/* ======== FOOTER ===================== */
-
-.footer {
-  background-color: #4894ea;
-  /* margin: 0px; */
-}
-
-
-.footer ul {
-  text-align: right;
-  position: left;
-  /* list-style-position: inside; */
-  /* display: block; */
-  text-align: right;
-  margin-right: 20px;
-  list-style:none
-}
