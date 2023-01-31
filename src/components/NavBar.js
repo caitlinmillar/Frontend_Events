@@ -12,8 +12,9 @@ const NavBar = () => {
     // }
 
     return ( 
-        <header className="header">
+        <div className="navbar">
             <input className="search" type="search" placeholder="search..." />
+
             <Link to=""> <img src={logo} className="logo" alt="Logo"/></Link>
             <button type="submit"> My profile</button>
             <button className="open-register">
@@ -23,6 +24,14 @@ const NavBar = () => {
                 <Link to={"/login"}>Login</Link>
             </button>
         </header>
+
+            <input className="submit" type="submit"/>
+            <Link to=""> 
+                <img src={logo} className="logo" alt="Logo"/>
+            </Link>
+            <button className="My-profile" type="submit"> My profile</button>
+        </div>
+
      );
 }
 

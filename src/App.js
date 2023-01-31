@@ -32,14 +32,16 @@ function App() {
     <>
     <NavBar/>
     <Featured className="Featured"/>
-    <CarouselList/>
+    
     <Routes>
-            <Route path="" element={<><Featured className="Featured"/><EventContainer/></>} />
-            
+            <Route path="" element={<><EventContainer/><CarouselList/></>} />
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
             <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
             <Route path="/register" element={<UserRegistration postUser={postUser}/>}/>
+
+
+            <Route path="/users" element={<UserContainer/>}/>
 
     </Routes>
     <Footer/>
