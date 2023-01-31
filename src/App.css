@@ -65,23 +65,28 @@ object-position: 25% 70%;
 }
 
 /* Event Card */
-.eventName {
-  font-size: 20px;
+.eventCardName {
+  font-size: 70px;
+  margin-left: 30px;
+  margin-bottom: 0;
+
+}
+
+.description {
+  margin-left: 30px;
+  margin-bottom: 0;
 }
 .eventImage {
   display: flex;
   border: 15px solid rgb(50, 86, 155);
-  padding: 50px;
-  margin: 20px;
 }
-
 
 .leftChild {
   display: inline-block;
-  border: 5px solid rgb(50, 86, 155);
+  border: 0px solid rgb(50, 86, 155);
   padding: 50px;
-  margin: 20px;
+  margin-left: 30px;
   vertical-align: middle;
-  
+  /* text-align: center; */
 }
 
