@@ -9,12 +9,11 @@ import ExpandingList from './components/ExpandingList';
 
 function App() {
 
-  
 
   return (
     <BrowserRouter>
     <NavBar/>
-    <ExpandingList/>
+    {/* <ExpandingList /> */}
     <Featured className="Featured"/>
     
     <Routes>

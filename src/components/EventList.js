@@ -1,4 +1,5 @@
 import Event from "./Event";
+import ExpandingList from "./ExpandingList";
 import Spotlight from "./Spotlight";
 
 const EventList = ({ events, handleEvent}) => {
@@ -11,7 +12,9 @@ const EventList = ({ events, handleEvent}) => {
     
     return (
         <>
+
         {eventComponents}
+        
         </>
     )
 }

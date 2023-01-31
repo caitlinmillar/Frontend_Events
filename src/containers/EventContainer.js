@@ -24,6 +24,7 @@ const EventContainer = () => {
     return (
        <div className="carousel-events">
        <Spotlight events={events}/>
+       <ExpandingList events={events}/>
        </div>
     )
     }  
