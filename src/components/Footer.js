@@ -3,7 +3,7 @@ const Footer = () => {
     return ( 
         <div className="footer">
             <p>©2023 Whale of a time</p>
-            <ul>
+            <ul className="footerLinks">
                 <li>
                     <a href="#">Terms & Conditions</ a>
                 </li>
@@ -11,7 +11,7 @@ const Footer = () => {
                     <a href="#">FAQs</a>
                 </li>
                 <li>
-                    <a href="#">Contact U</a>
+                    <a href="#">Contact Us</a>
                 </li>
                 <li>
                     <a href="#">Cookies</a>
