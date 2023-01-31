@@ -1,6 +1,12 @@
-.Featured img {
+.Featured {
   width: 100%;
-  
+  height: 500px;
+}
+.Featured img {
+width: 100%; 
+height: 400px; 
+object-fit: cover;
+object-position: 25% 70%; 
 }
 
 .carousel-events {
@@ -9,14 +15,24 @@
   justify-content: space-evenly;
 }
 
+.header {
+  display: flexbox;
+  justify-content: space-between;
+  background-color: #4894ea;
+}
+.logo {
+  width: 200px; 
+  object-fit:contain; 
+}
+
+.logo:hover {
+  color: #000;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

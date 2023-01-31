@@ -4,6 +4,7 @@ import EventList from "../components/EventList";
 import Event from "../components/Event";
 import EventCard from "../components/EventCard";
 import Spotlight from "../components/Spotlight";
+import ExpandingList from "../components/ExpandingList";
 
 
 const EventContainer = () => {
@@ -22,8 +23,8 @@ const EventContainer = () => {
 
     return (
        <div className="carousel-events">
-       {/* <EventList events={events} /> */}
        <Spotlight events={events}/>
+       <ExpandingList events={events}/>
        </div>
     )
     }  
