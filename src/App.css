@@ -52,3 +52,20 @@
 .eventName {
   font-size: 20px;
 }
+.eventImage {
+  display: flex;
+  border: 15px solid rgb(50, 86, 155);
+  padding: 50px;
+  margin: 20px;
+}
+
+
+.leftChild {
+  display: inline-block;
+  border: 5px solid rgb(50, 86, 155);
+  padding: 50px;
+  margin: 20px;
+  vertical-align: middle;
+  
+}
+
