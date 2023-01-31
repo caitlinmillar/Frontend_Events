@@ -1,12 +1,13 @@
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer = () => {
     return ( 
         <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
         <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
           <div className='me-5 d-none d-lg-block'>
-            <span>Get connected with us on social networks:</span>
+            <span>Find us on social networks:</span>
           </div>
   
           <div>
@@ -37,35 +38,11 @@ const Footer = () => {
               <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
                 <h6 className='text-uppercase fw-bold mb-4'>
                   <MDBIcon color='secondary' icon='gem' className='me-3' />
-                  Company name
+                  © 2023 Whale of a Time
                 </h6>
                 <p>
-                  Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+                    Lorem ipsum dolor sit
                   amet, consectetur adipisicing elit.
-                </p>
-              </MDBCol>
-  
-              <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
-                <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
-                <p>
-                  <a href='#!' className='text-reset'>
-                    Angular
-                  </a>
-                </p>
-                <p>
-                  <a href='#!' className='text-reset'>
-                    React
-                  </a>
-                </p>
-                <p>
-                  <a href='#!' className='text-reset'>
-                    Vue
-                  </a>
-                </p>
-                <p>
-                  <a href='#!' className='text-reset'>
-                    Laravel
-                  </a>
                 </p>
               </MDBCol>
   
@@ -73,7 +50,7 @@ const Footer = () => {
                 <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
                 <p>
                   <a href='#!' className='text-reset'>
-                    Pricing
+                    Contact
                   </a>
                 </p>
                 <p>
@@ -83,7 +60,7 @@ const Footer = () => {
                 </p>
                 <p>
                   <a href='#!' className='text-reset'>
-                    Orders
+                    Terms and Conditions
                   </a>
                 </p>
                 <p>
@@ -97,17 +74,15 @@ const Footer = () => {
                 <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                 <p>
                   <MDBIcon color='secondary' icon='home' className='me-2' />
-                  New York, NY 10012, US
+                  L80 Middlesex St, London E1 7EZ
+
                 </p>
                 <p>
                   <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                  info@example.com
+                  info@WOAT.com
                 </p>
                 <p>
-                  <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
-                </p>
-                <p>
-                  <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
+                  <MDBIcon color='secondary' icon='phone' className='me-3' />020 7197 9902
                 </p>
               </MDBCol>
             </MDBRow>
@@ -115,10 +90,6 @@ const Footer = () => {
         </section>
   
         <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-          © 2021 Copyright:
-          <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-            MDBootstrap.com
-          </a>
         </div>
       </MDBFooter>
      );
