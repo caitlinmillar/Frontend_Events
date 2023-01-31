@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
 
     <Link to="">Home</Link>
-    <Featured/>
+    <Featured className="Featured"/>
     
     <Routes>
             <Route path="" element={<EventContainer/>} />
