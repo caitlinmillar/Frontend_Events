@@ -11,7 +11,9 @@ const NavBar = () => {
         // document.getElementById("").style.display = "none" 
     // }
 
-    return ( 
+    return (
+        <>
+        <header>
         <div className="navbar">
             <input className="search" type="search" placeholder="search..." />
 
@@ -23,7 +25,7 @@ const NavBar = () => {
             <button>
                 <Link to={"/login"}>Login</Link>
             </button>
-        </header>
+        
 
             <input className="submit" type="submit"/>
             <Link to=""> 
@@ -31,7 +33,8 @@ const NavBar = () => {
             </Link>
             <button className="My-profile" type="submit"> My profile</button>
         </div>
-
+        </header>
+        </>
      );
 }
 
