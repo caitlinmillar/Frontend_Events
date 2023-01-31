@@ -5,6 +5,7 @@ import ChosenEventContainer from './containers/ChosenEventContainer';
 import Footer from './components/Footer';
 import Featured from './components/Featured';
 import NavBar from './components/NavBar';
+import UserContainer from './containers/UserContainer';
 
 function App() {
 
@@ -13,11 +14,12 @@ function App() {
   return (
     <BrowserRouter>
     <NavBar/>
-    <Featured className="Featured"/>
     
     <Routes>
-            <Route path="" element={<EventContainer/>} />
+            <Route path="" element={<><Featured className="Featured"/><EventContainer/></>} />
+            
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
+            <Route path="/users" element={<UserContainer/>}/>
 
     </Routes>
     <Footer/>
