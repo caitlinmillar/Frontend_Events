@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const UserRegistration = ({users, postUser}) => {
 
-    // Will need to add an useNavigate later
+    const navigate = useNavigate();
 
     // Need a way to store passwords
 
@@ -26,8 +27,8 @@ const UserRegistration = ({users, postUser}) => {
     }
     const handleSubmitForm = (event) => {
         event.preventDefault();
-        postUser(stateUser)
-        // navigate("/register")
+        postUser(stateUser);
+        navigate("/register")
         
         // Registration pop-up should have an URL
         // Where should the Pop-up code go?
