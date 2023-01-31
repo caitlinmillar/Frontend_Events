@@ -18,23 +18,14 @@ const ChosenUserContainer = () => {
         .then((response) => response.json())
         .then((response) => (setUser(response)))
     }, [])
-    
 
     return ( 
         <>
 
-            {/* {/* {singleUser} */}
                 <h2 className="username">Welcome Back, {user.name}</h2>
                 <p className="user-email-address">{user.emailAddress}</p>
                 <p className="upcoming-events">Here are your upcoming events:</p>
-                {/* <ul>
-                    {user.events.map((event, index) => {
-                        return(
-                            <li key={index}>{event}</li>
-                        )
-                    })}
-                </ul> */}
-
+                {user ?<ul>{user.events.map((event) => { return <li key={user.name}>{event.eventName}</li>})}</ul> :""}
         </>
      );
     }
@@ -42,3 +33,10 @@ const ChosenUserContainer = () => {
     
     export default ChosenUserContainer;
     // Want to display the User's upcoming events
+    {/* <ul>
+        {user.events.map((event, index) => {
+            return(
+                <li key={index}>{event}</li>
+            )
+        })}
+    </ul> */}

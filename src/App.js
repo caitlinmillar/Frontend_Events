@@ -10,9 +10,22 @@ import UserContainer from './containers/UserContainer';
 import ChosenUserContainer from './containers/ChosenUserContainer';
 import { Carousel } from 'antd';
 import CarouselList from './components/CarouselList';
+import UserRegistration from './components/UserRegistration';
+import {useState} from 'react';
 
 function App() {
 
+  const [users, setUsers] = useState([])
+
+  const postUser = async (newUser) => {
+    const response = await fetch("http://localhost:8080/users", {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(newUser)
+    })
+    const registeredUser = await response.json()
+    setUsers([...users, registeredUser])
+}
 
   return (
     <BrowserRouter>
@@ -24,8 +37,9 @@ function App() {
             <Route path="" element={<><Featured className="Featured"/><EventContainer/></>} />
             
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
-            <Route path="/users" element={<UserContainer/>}/>
+            <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
+            <Route path="/register" element={<UserRegistration postUser={postUser}/>}/>
 
     </Routes>
     <Footer/>
