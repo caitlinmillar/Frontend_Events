@@ -24,12 +24,7 @@ const ChosenEventContainer = () => {
          <div>            
             {/* <p className="id">{id}</p> */}
             <div className="eventImage">
-<<<<<<< HEAD
             {/* <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80-torres-MQUqbmszGGM-unsplash.jpg" alt="featured event" /> */}
-=======
-                <img src={carShow} alt="car show image"/>
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80-torres-MQUqbmszGGM-unsplash.jpg" alt="featured event" />
->>>>>>> cf0f0376bbab90f8ab7d1014e75d1361f084eda8
             </div>
             <h2 className="eventCardName">{event.eventName}</h2>
             <h4 className="description">{event.eventDescription}</h4>
