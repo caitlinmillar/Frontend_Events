@@ -23,7 +23,7 @@ const contentStyle = {
     {"id" : 4, "url": pic4},
 ]
 
-const CarouselList = ({ images }) => {
+const CarouselList = () => {
 
     // const carouselMap = events.slice(0, 4).map((event, id) => {
     // return <Event event = {event} key={id} name = {event.eventName}/>
@@ -39,8 +39,11 @@ const CarouselList = ({ images }) => {
         <>
         <Carousel afterChange={onChange}>
         <div>
-            <Link to="">
-            <h3 style={contentStyle}><img src={pic1}/></h3></Link>
+            
+            <h3 style={contentStyle}>
+                <Link to="/merch"><img src={pic1}/> </Link>
+                </h3>
+               
         </div>
         <div>
             <h3 style={contentStyle}><img src={pic2}/></h3>

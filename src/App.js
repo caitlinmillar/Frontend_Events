@@ -5,13 +5,12 @@ import ChosenEventContainer from './containers/ChosenEventContainer';
 import Footer from './components/Footer';
 import Featured from './components/Featured';
 import NavBar from './components/NavBar';
-import ExpandingList from './components/ExpandingList';
 import UserContainer from './containers/UserContainer';
 import ChosenUserContainer from './containers/ChosenUserContainer';
-import { Carousel } from 'antd';
 import CarouselList from './components/CarouselList';
 import UserRegistration from './components/UserRegistration';
 import {useState} from 'react';
+import Merch from './components/Merch';
 
 function App() {
 
@@ -39,7 +38,7 @@ function App() {
             <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
             <Route path="/register" element={<UserRegistration postUser={postUser}/>}/>
-
+            <Route path='/merch' element={<Merch/>}/>
 
             <Route path="/users" element={<UserContainer/>}/>
 
