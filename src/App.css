@@ -42,9 +42,13 @@ filter: contrast(75%);
   
 }
 
+.list .panel-header {
+  color: white;
+}
+
 .showAll{
-  color:rgb(255, 255, 255);
-  font-size: 2em;
+  color: white;
+  font-size: 5em;
 }
 
 .initialList img, .expandedList img{
