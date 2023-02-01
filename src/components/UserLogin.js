@@ -5,36 +5,24 @@ import { Button, Checkbox, Form, Input } from "antd";
 
 const UserLogin = () => {
 
-    // Create the Pop-up form here
     // User authentication here
     // Create a button that's linked to register => "Not yet a member? Register here"
     // Idea: login pop-up -> succesful login -> my profile page -> toggle the buttons
 
     const navigate = useNavigate();
 
-    // const [stateUser, setStateUser] = useState(
-    //     {
-    //         emailAddress: "",
-    //         password: ""
+    
+    const [form] = Form.useForm();
 
-    //     }
-    // )
-
-    // handleInputChange = (event) => {
-    //     event.preventDefault();
-    //     const target = event.target;
-    //     setStateUser({
-    //         [target.name]: target.value
-    //     })
-    // }
-
-        const onFinish = values =>{
-            console.log("Received values of form", values);
-        }
+        // const onFinish = values =>{
+        //     console.log("Received values of form", values);
+        // }
 
         const handleSubmit = (event) => {
-            event.preventDefault();
-            navigate("/login")
+            alert("User has been signed in");
+            // event.preventDefault();
+            form.resetFields();
+            navigate("/login");
         }
     
 
@@ -44,13 +32,14 @@ const UserLogin = () => {
     // - if exists - have both piece of info( name, email address) - index of. use user/id
     return ( 
         <>
-        <Form onSubmit={handleSubmit}
+        <Form onFinish={handleSubmit}
+        form={form}
         name="login"
         className="login-form"
         initialValues={{
             remember: true,
         }}
-        onFinish={onFinish}>
+        >
             <Form.Item
             name="emailAddress"
             rules={[
@@ -84,7 +73,7 @@ const UserLogin = () => {
             </Form.Item>
 
             <Form.Item>
-                <Button type="submit" className="login-button">
+                <Button type="primary" htmlType="submit" className="login-button">
                     Login
                 </Button>
                 <a href="/register">Not a member yet? Sign up now!</a>
@@ -96,4 +85,4 @@ const UserLogin = () => {
  
 export default UserLogin;
 
-// prefix={<UserOutlined className="site-form-item-icon"/>} -- this belong in the Input - try without first
+// onChange={(event) => setNewEmailAddress(event.target.value)}
