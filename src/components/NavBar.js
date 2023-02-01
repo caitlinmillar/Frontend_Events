@@ -4,6 +4,10 @@ import { Button, Popover } from "antd";
 import UserRegistration from "./UserRegistration";
 import UserLogin from "./UserLogin";
 
+import { MDBBtn, MDBInput, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Switch } from 'antd';
 
 const NavBar = () => {
 
@@ -19,12 +23,14 @@ const NavBar = () => {
         </div>
     )
 
-    return ( 
-        <div className="navbar">
-            <input className="search" type="search" placeholder="search..." />
+    const onChange = (checked) => {
+        console.log(`switch to ${checked}`);
+      };
 
-            <Link to=""> <img src={logo} className="logo" alt="Logo"/></Link>
-            <button type="submit"> My profile</button>
+
+    return (
+        <>
+        <div className="navbar">
 
             <Popover content={registerContent} title="User Registration">
                 <Button type="primary" className="open-register">
@@ -38,13 +44,36 @@ const NavBar = () => {
                 </button>
             </Popover>
 
-            <input className="submit" type="submit"/>
-            <Link to=""> 
-                <img src={logo} className="logo" alt="Logo"/>
-            </Link>
-            <button className="My-profile" type="submit"> My profile</button>
-        </div>
+            <section className=''>
 
+        <Switch defaultChecked onChange={onChange} />
+          <form action=''>
+            <MDBRow className='d-flex justify-content-center'>
+
+              <MDBCol md='5' start>
+                <MDBInput contrast type='search' label='Search...' className='mb-4' />
+              </MDBCol>
+
+              <MDBCol size="auto">
+                <MDBBtn outline color='light' type='submit' className='mb-'>Go
+                </MDBBtn>
+              </MDBCol>
+
+              <MDBCol>
+                <Link to=""> 
+                <img className="logo" src={logo} width="100" height="75"  alt="Logo"/>
+                </Link>
+              </MDBCol>
+            </MDBRow>
+          </form>
+        </section>
+            <MDBRow size="auto">
+                <MDBBtn outline color='light' type='submit' className='mb-'>My Profile
+                </MDBBtn>
+              </MDBRow>
+
+        </div>
+        </>
      );
 }
 

@@ -32,10 +32,9 @@ function App() {
     <BrowserRouter>
     <>
     <NavBar/>
-    <Featured className="Featured"/>
     
     <Routes>
-            <Route path="" element={<><EventContainer/><CarouselList/></>} />
+            <Route path="" element={<><Featured className="Featured"/><EventContainer/><CarouselList/></>} />
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
             <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />

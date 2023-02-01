@@ -8,8 +8,8 @@ const EventCard = ({ eventName, eventDescription }) => {
 
     return(
         <>
-            {eventName}
-            {eventDescription}
+        {/* //     {eventName} */}
+            {/* {eventDescription} */}
         </>
     )
 }
