@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button, Checkbox, Form, Input } from "antd";
+
 
 const UserRegistration = ({users, postUser}) => {
 
@@ -7,9 +9,11 @@ const UserRegistration = ({users, postUser}) => {
 
     // Need a way to store passwords
 
-    // Create the pop-up functionality here?
+    // Make sure the pop-ups are adding users - check the onClick in the Pop-up
 
     // Have a button that linked to the Login pop-up => "Already a member? Login here"
+
+    // Clear form once info has been submitted
 
     const [stateUser, setStateUser] = useState(
         {
@@ -34,28 +38,92 @@ const UserRegistration = ({users, postUser}) => {
         // Where should the Pop-up code go?
     }
 
+    const onFinish = values =>{
+        console.log("Received values of form", values);
+    }
+
     return ( 
     <>
-    <h3>Hello from User Registration</h3>
-    <form onSubmit={handleSubmitForm}>
-        <input
-            type="text"
-            placeholder="Name"
-            name="name"
-            onChange={handleChange}
-            value={stateUser.name}/>
+    <Form onSubmit={handleSubmitForm}
+    name="register"
+    className="registration-form"
+    initialValues={{
+        remember: true,
+    }}
+    onFinish={onFinish}>
+        <Form.Item
+        name="name"
+        rules={[
+            {
+                required: true,
+                message: "Please enter your name!",
+            }
+        ]}>
+            <Input
+                type="text"
+                placeholder="Name"
+                name="name"
+                onChange={handleChange}
+                value={stateUser.name}/>
+        </Form.Item>
 
-        <input 
-            type="text"
-            placeholder="Email Address"
-            name="emailAddress"
-            onChange={handleChange}
-            value={stateUser.emailAddress}/>
+        <Form.Item
+        name="emailAddress"
+        rules={[
+            {
+                required: true,
+                message: "Please enter your email address!"
+            }
+        ]}>
+            <Input 
+                type="text"
+                placeholder="Email Address"
+                name="emailAddress"
+                onChange={handleChange}
+                value={stateUser.emailAddress}/>
+        </Form.Item>
 
-            {/* Need to do Password and Confirm Password */}
+        <Form.Item
+        name="password"
+        rules={[
+            {
+                required: true,
+                message: "Please enter your password!",
+            }
+        ]}>
+            <Input
+                type="password"
+                placeholder="Password"
+                name="password"/>
+        </Form.Item>
 
-        <button type="submit">Register</button>
-    </form>
+        <Form.Item
+        name="confirm-password"
+        rules={[
+            {
+                required: true,
+                message: "Password and Confirm Password must be the same!"
+            }
+        ]}>
+            <Input
+                type="password"
+                placeholder="Confirm Password"
+                name="confirm-password"/>
+        </Form.Item>
+
+        <Form.Item
+        name="keep-me-signed-in" valuePropName="checked" noStyle>
+            <Checkbox>Keep me signed in</Checkbox>
+        </Form.Item>
+
+            {/* Need to add conditional statement to make sure password works */}
+        <Form.Item>
+            <Button type="submit">
+                Register
+            </Button>
+            <a href="/login">Already a member? Login here!</a>
+        </Form.Item>
+    </Form>
     </> 
     );
 }

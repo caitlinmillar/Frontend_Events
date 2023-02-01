@@ -10,6 +10,7 @@ import ChosenUserContainer from './containers/ChosenUserContainer';
 import CarouselList from './components/CarouselList';
 import UserRegistration from './components/UserRegistration';
 import {useState} from 'react';
+import UserLogin from './components/UserLogin';
 import Merch from './components/Merch';
 
 function App() {
@@ -30,15 +31,14 @@ function App() {
     <BrowserRouter>
     <>
     <NavBar/>
-    <Featured className="Featured"/>
     
     <Routes>
-            <Route path="" element={<><EventContainer/><CarouselList/></>} />
+            <Route path="" element={<><Featured className="Featured"/><EventContainer/><CarouselList/></>} />
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
             <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
             <Route path="/register" element={<UserRegistration postUser={postUser}/>}/>
-            <Route path='/merch' element={<Merch/>}/>
+            <Route path="login" element={<UserLogin/>}/>            <Route path='/merch' element={<Merch/>}/>
 
             <Route path="/users" element={<UserContainer/>}/>
 
