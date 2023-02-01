@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
 import logo from './assets/WOAT.jpeg';
+import { Button, Popover } from "antd";
+import UserRegistration from "./UserRegistration";
+import UserLogin from "./UserLogin";
+
 
 const NavBar = () => {
 
-    // Add function for pop-up - one for open and one for close
-    // const openPop() => {
-        // document.getElementById("").style.display = "block"
-    // }
-    // const closePop() => {
-        // document.getElementById("").style.display = "none" 
-    // }
+    const registerContent = (
+        <div>
+            <UserRegistration/>
+        </div>
+    )
+
+    const loginContent = (
+        <div>
+            <UserLogin/>
+        </div>
+    )
 
     return ( 
         <div className="navbar">
@@ -17,13 +25,18 @@ const NavBar = () => {
 
             <Link to=""> <img src={logo} className="logo" alt="Logo"/></Link>
             <button type="submit"> My profile</button>
-            <button className="open-register">
-                <Link to={"/register"}>Register</Link>
-            </button>
-            <button>
-                <Link to={"/login"}>Login</Link>
-            </button>
-        </header>
+
+            <Popover content={registerContent} title="User Registration">
+                <Button type="primary" className="open-register">
+                    <Link to={"/register"}>Register</Link>
+                </Button>
+            </Popover> 
+            
+            <Popover content={loginContent} title="User Login">
+                <button type="primary" className="open-login">
+                    <Link to={"/login"}>Login</Link>
+                </button>
+            </Popover>
 
             <input className="submit" type="submit"/>
             <Link to=""> 

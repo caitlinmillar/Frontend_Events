@@ -12,6 +12,7 @@ import { Carousel } from 'antd';
 import CarouselList from './components/CarouselList';
 import UserRegistration from './components/UserRegistration';
 import {useState} from 'react';
+import UserLogin from './components/UserLogin';
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
             <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
             <Route path="/register" element={<UserRegistration postUser={postUser}/>}/>
-
+            <Route path="login" element={<UserLogin/>}/>
 
             <Route path="/users" element={<UserContainer/>}/>
 

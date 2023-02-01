@@ -29,14 +29,7 @@ const ChosenUserContainer = () => {
         </>
      );
     }
-    // Having an issue rendering the user info 
+  
     
     export default ChosenUserContainer;
-    // Want to display the User's upcoming events
-    {/* <ul>
-        {user.events.map((event, index) => {
-            return(
-                <li key={index}>{event}</li>
-            )
-        })}
-    </ul> */}
+  
