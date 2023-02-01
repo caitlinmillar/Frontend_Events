@@ -3,6 +3,7 @@ import logo from './assets/WOAT.jpeg';
 import { MDBBtn, MDBInput, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Switch } from 'antd';
 
 const NavBar = () => {
 
@@ -14,11 +15,17 @@ const NavBar = () => {
         // document.getElementById("").style.display = "none" 
     // }
 
+    const onChange = (checked) => {
+        console.log(`switch to ${checked}`);
+      };
+
+
     return (
         <>
         <div className="navbar">
             <section className=''>
 
+        <Switch defaultChecked onChange={onChange} />
           <form action=''>
             <MDBRow className='d-flex justify-content-center'>
 
