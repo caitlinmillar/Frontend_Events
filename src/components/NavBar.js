@@ -34,17 +34,22 @@ const NavBar = () => {
               </MDBCol>
 
               <MDBCol size="auto">
-                <MDBBtn outline color='light' type='submit' className='mb-'>
-                  Go
+                <MDBBtn outline color='light' type='submit' className='mb-'>Go
                 </MDBBtn>
+              </MDBCol>
+
+              <MDBCol>
+                <Link to=""> 
+                <img className="logo" src={logo} width="100" height="75"  alt="Logo"/>
+                </Link>
               </MDBCol>
             </MDBRow>
           </form>
         </section>
-            <Link to=""> 
-                <img src={logo} className="logo" alt="Logo"/>
-            </Link>
-            <button className="My-profile" type="submit"> My profile</button>
+            <MDBRow size="auto">
+                <MDBBtn outline color='light' type='submit' className='mb-'>My Profile
+                </MDBBtn>
+              </MDBRow>
         </div>
         </>
      );

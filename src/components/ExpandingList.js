@@ -1,4 +1,3 @@
-import EventList from "./EventList"
 import Event from "./Event"
 import { Collapse } from 'antd';
 const { Panel } = Collapse;
@@ -10,7 +9,7 @@ const ExpandingList = ({ events }) => {
         return <Event event = {event} key={id} name = {event.eventName}/>
     })
 
-    const expandedList = events.slice(5, 100).map((event, id) => {
+    const expandedList = events.slice(5, 10).map((event, id) => {
         return <Event event = {event} key={id} name = {event.eventName}/>
     })
 
