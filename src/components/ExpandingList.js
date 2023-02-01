@@ -19,11 +19,11 @@ const ExpandingList = ({ events }) => {
 
     return (
     <>
-    <div className="expandingList">
-        <Collapse forceRender="true"ghost="true"bordered="false" collapsible= "header" onChange={onDropdownChange}>
-            {initialList}
-            <Panel  header="show all" key="1">
-                <p>{expandedList}</p>
+    <div className="list">
+        <Collapse ghost="true"bordered="false" collapsible= "header" onChange={onDropdownChange}>
+            <div className="initialList">{initialList}</div>
+            <Panel className="showAll" header="show all"  key="1">
+                <div className="expandedList">{expandedList}</div>
             </Panel>
         </Collapse>   
     </div>

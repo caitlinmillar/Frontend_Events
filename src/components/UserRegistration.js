@@ -7,6 +7,8 @@ const UserRegistration = ({users, postUser}) => {
 
     const navigate = useNavigate();
 
+    const [form] = Form.useForm();
+
     // Need a way to store passwords
 
     // Make sure the pop-ups are adding users - check the onClick in the Pop-up
@@ -30,8 +32,10 @@ const UserRegistration = ({users, postUser}) => {
         setStateUser(copiedUser);
     }
     const handleSubmitForm = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
+        alert("User has been registered")
         postUser(stateUser);
+        form.resetFields();
         navigate("/register")
         
         // Registration pop-up should have an URL
@@ -44,13 +48,14 @@ const UserRegistration = ({users, postUser}) => {
 
     return ( 
     <>
-    <Form onSubmit={handleSubmitForm}
+    <Form onFinish={handleSubmitForm}
+    form={form}
     name="register"
     className="registration-form"
     initialValues={{
         remember: true,
     }}
-    onFinish={onFinish}>
+    >
         <Form.Item
         name="name"
         rules={[
@@ -118,7 +123,7 @@ const UserRegistration = ({users, postUser}) => {
 
             {/* Need to add conditional statement to make sure password works */}
         <Form.Item>
-            <Button type="submit">
+            <Button type="primary" htmlType="submit">
                 Register
             </Button>
             <a href="/login">Already a member? Login here!</a>
