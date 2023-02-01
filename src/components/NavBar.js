@@ -16,7 +16,6 @@ const NavBar = () => {
 
     return (
         <>
-        <header>
         <div className="navbar">
             <section className=''>
 
@@ -40,7 +39,6 @@ const NavBar = () => {
             </Link>
             <button className="My-profile" type="submit"> My profile</button>
         </div>
-        </header>
         </>
      );
 }
