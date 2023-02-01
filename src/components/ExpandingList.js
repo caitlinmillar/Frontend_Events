@@ -22,7 +22,7 @@ const ExpandingList = ({ events }) => {
     <div className="list">
         <Collapse ghost="true"bordered="false" collapsible= "header" onChange={onDropdownChange}>
             <div className="initialList">{initialList}</div>
-            <Panel  header="show all" key="1">
+            <Panel className="showAll" header="show all"  key="1">
                 <div className="expandedList">{expandedList}</div>
             </Panel>
         </Collapse>   
