@@ -32,17 +32,6 @@ const NavBar = () => {
         <>
         <div className="navbar">
 
-            <Popover content={registerContent} title="User Registration">
-                <Button type="primary" className="open-register">
-                    <Link to={"/register"}>Register</Link>
-                </Button>
-            </Popover> 
-            
-            <Popover content={loginContent} title="User Login">
-                <button type="primary" className="open-login">
-                    <Link to={"/login"}>Login</Link>
-                </button>
-            </Popover>
 
             <section className=''>
 
@@ -71,6 +60,18 @@ const NavBar = () => {
                 <MDBBtn outline color='light' type='submit' className='mb-'>My Profile
                 </MDBBtn>
               </MDBRow>
+              
+            <Popover content={registerContent} title="User Registration">
+                <Button type="primary" className="open-register">
+                    <Link to={"/register"}>Register</Link>
+                </Button>
+            </Popover> 
+            
+            <Popover content={loginContent} title="User Login">
+                <button type="primary" className="open-login">
+                    <Link to={"/login"}>Login</Link>
+                </button>
+            </Popover>
 
         </div>
         </>
