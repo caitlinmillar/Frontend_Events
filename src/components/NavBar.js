@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from './assets/WOAT.jpeg';
+import { Switch } from 'antd';
 
 const NavBar = () => {
 
@@ -11,13 +12,18 @@ const NavBar = () => {
         // document.getElementById("").style.display = "none" 
     // }
 
+    const onChange = (checked) => {
+        console.log(`switch to ${checked}`);
+      };
+
+
     return (
         <>
         <header>
         <div className="navbar">
             <input className="search" type="search" placeholder="search..." />
-
             <Link to=""> <img src={logo} className="logo" alt="Logo"/></Link>
+            <Switch defaultChecked onChange={onChange} />
             <button type="submit"> My profile</button>
             <button className="open-register">
                 <Link to={"/register"}>Register</Link>
