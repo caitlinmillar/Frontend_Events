@@ -35,31 +35,38 @@ const NavBar = () => {
 
             <section className=''>
 
-        <Switch defaultChecked onChange={onChange} />
-          <form action=''>
-            <MDBRow className='d-flex justify-content-center'>
+                <Switch defaultChecked onChange={onChange} />
+                <form action=''>
+                    <MDBRow className='d-flex justify-content-center'>
 
-              <MDBCol md='5' start>
-                <MDBInput contrast type='search' label='Search...' className='mb-4' />
-              </MDBCol>
+                    <MDBCol md='5' start>
+                        <MDBInput contrast type='search' label='Search...' className='mb-4' />
+                    </MDBCol>
 
-              <MDBCol size="auto">
-                <MDBBtn outline color='light' type='submit' className='mb-'>Go
-                </MDBBtn>
-              </MDBCol>
+                    <MDBCol size="auto">
+                        <MDBBtn outline color='light' type='submit' className='mb-'>Go
+                        </MDBBtn>
+                    </MDBCol>
+
+                    </MDBRow>
+                </form>
+
+            </section>
+            <section>
 
               <MDBCol>
             <Link to=""> 
-                <img className="logo" src={logo} width="100" height="75"  alt="Logo"/>
+                <img className="logo" src={logo} width="100"  alt="Logo"/>
             </Link>
               </MDBCol>
-            </MDBRow>
-          </form>
-        </section>
-            <MDBRow size="auto">
+            </section>
+
+            <section>
+
+            <MDBCol size="auto">
                 <MDBBtn outline color='light' type='submit' className='mb-'>My Profile
                 </MDBBtn>
-              </MDBRow>
+              </MDBCol>
               
             <Popover content={registerContent} title="User Registration">
                 <Button type="primary" className="open-register">
@@ -72,6 +79,8 @@ const NavBar = () => {
                     <Link to={"/login"}>Login</Link>
                 </button>
             </Popover>
+            
+            </section>
 
         </div>
         </>
