@@ -9,6 +9,10 @@ object-fit: cover;
 object-position: 25% 70%; 
 }
 
+.Event img {
+  width: 100%;
+  height: 500px;
+}
 .carousel-events {
   display: flex;
   flex-wrap: wrap;
