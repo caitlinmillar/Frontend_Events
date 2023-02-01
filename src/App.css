@@ -17,7 +17,7 @@ filter: contrast(75%);
 }
 
 .carousel-events {
-  display: flex;
+  display: flexbox;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
