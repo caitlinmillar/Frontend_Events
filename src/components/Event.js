@@ -21,9 +21,10 @@ const imageList = [{"id": 1, "url": "https://placebear.com/100/100" }
 
 const Event = ({event, id}) => (
     <div className="Event">
-         <img src={imageList[event.id].url}/>
+         {/* <img src={imageList[event.id].url}/> */}
         <button>
-            <Link className="show-btn" to={`/events/${event.id}`}>show
+            <Link className="show-btn" to={`/events/${event.id}`}>
+                <img src={imageList[event.id].url}/>
             </Link>
         </button>
         <p className="eventName">{event.eventName}</p>
