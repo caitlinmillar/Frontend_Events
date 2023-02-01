@@ -28,7 +28,7 @@ const NavBar = () => {
       };
 
 
-    return (
+    return ( 
         <>
         <div className="navbar">
 
@@ -49,9 +49,9 @@ const NavBar = () => {
               </MDBCol>
 
               <MDBCol>
-                <Link to=""> 
+            <Link to=""> 
                 <img className="logo" src={logo} width="100" height="75"  alt="Logo"/>
-                </Link>
+            </Link>
               </MDBCol>
             </MDBRow>
           </form>
