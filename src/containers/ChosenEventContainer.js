@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link, useLocation, useParams } from "react-router-dom";
 import paint from "./eventImages/paint.jpg";
+import carshow from "./eventImages/carshow.jpg";
+import pizza from "./eventImages/pizza.jpg";
 
 
 

@@ -23,7 +23,7 @@ const NavBar = () => {
             <MDBRow className='d-flex justify-content-center'>
 
               <MDBCol md='5' start>
-                <MDBInput contrast type='email' label='Search...' className='mb-4' />
+                <MDBInput contrast type='search' label='Search...' className='mb-4' />
               </MDBCol>
 
               <MDBCol size="auto">
