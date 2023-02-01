@@ -5,7 +5,18 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const NavBar = () => {
-    return ( 
+
+    // Add function for pop-up - one for open and one for close
+    // const openPop() => {
+        // document.getElementById("").style.display = "block"
+    // }
+    // const closePop() => {
+        // document.getElementById("").style.display = "none" 
+    // }
+
+    return (
+        <>
+        <header>
         <div className="navbar">
             <section className=''>
 
@@ -29,8 +40,12 @@ const NavBar = () => {
             </Link>
             <button className="My-profile" type="submit"> My profile</button>
         </div>
+        </header>
+        </>
      );
 }
+
+// Create a toggle for "Register"/"Login" to "My Profile"
  
 export default NavBar;
 
