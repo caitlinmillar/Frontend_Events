@@ -28,9 +28,10 @@ filter: contrast(75%);
   background-color: #4894ea;
   max-width: 100%;
   padding: 1rem;
-  align-items:center;
-  position: relative;
+  align-content: center;
+  position:inherit;
 }
+
 .d-flex justify-content-center {
   width: 150px; 
   height: 75px;
@@ -41,22 +42,45 @@ filter: contrast(75%);
   
 }
 
+.showAll{
+  color:rgb(255, 255, 255);
+  font-size: 2em;
+}
+
+.initialList img, .expandedList img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.initialList, .expandedList{
+  display: flex;
+  justify-content: space-around; 
+  padding: 2px;
+  margin-top: 10px;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
 .Event img {
   width: 200px;
   height: 150px;
   object-fit: cover;
   filter: contrast(75%);
+  
 }
 
 .Event img:hover {
   filter: contrast(100%);
 }
-.expandingList {
+.list {
   background-color: #4894ea;
   background-image: url("https://cdn.shopify.com/s/files/1/0268/0307/7299/products/LH900109---Boho---Whale-Of-A-Times-Deep-Sea-Blue_1000x.jpg?v=1614282229");
   filter: hue-rotate(10%);
-  padding-right: 750px;
-  padding-left: 750px;
+  padding-right: 25px;
+  padding-left: 25px;
   padding-top: 50px;
   margin-top: -100px;
 }
@@ -73,9 +97,9 @@ filter: contrast(75%);
 
 .eventImage {
   width: 100%; 
-height: 400px; 
-object-fit: cover;
-object-position: 25% 70%; 
+  height: 400px; 
+  object-fit: cover;
+  object-position: 25% 70%; 
 }
 
 
@@ -85,16 +109,16 @@ object-position: 25% 70%;
   }
 }
 
-.app {
+/* .app {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
