@@ -38,21 +38,29 @@ const CarouselList = () => {
     return (
         <>
         <Carousel afterChange={onChange}>
-        <div>
-            
+        <div>    
             <h3 style={contentStyle}>
-                <Link to="/merch"><img src={pic1}/> </Link>
-                </h3>
-               
+                <Link to="/merch">
+                    <img src={pic1}/></Link>
+                    </h3>      
         </div>
         <div>
-            <h3 style={contentStyle}><img src={pic2}/></h3>
+            <h3 style={contentStyle}>
+                <Link to="/merch">
+                    <img src={pic2}/></Link>
+                    </h3>
         </div>
         <div>
-            <h3 style={contentStyle}><img src={pic3}/></h3>
+            <h3 style={contentStyle}>
+                <Link to="/merch">
+                    <img src={pic3}/></Link>
+                    </h3>
         </div>
         <div>
-            <h3 style={contentStyle}><img src={pic4}/></h3>
+            <h3 style={contentStyle}>
+                <Link to="/merch">
+                    <img src={pic4}/></Link>
+                    </h3>
         </div>
         </Carousel>
         </>
