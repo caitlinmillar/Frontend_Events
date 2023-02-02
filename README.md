@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Whale of a time :whale:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![whale-of-a-time-high-resolution-color-logo (1)](https://user-images.githubusercontent.com/110283546/216348369-d091364f-93bd-4a03-a7c3-65ad11647f31.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+<h2 align="center">Fight the FOMO</h2>
 
-### `npm start`
+## Project Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The backend API our team received was the events calender project by SAWS Code Team. An event booking system that allowed users to sign themselves up for events.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Our frontend team, Whale of a time, decided to focus more on fun events and classes for users to attend. We, like SAWS, were inspired by apps like Fastoma and Event Brite. The website we created allows registered users to sign up for events by simply using our get tickets button on individual event cards. Users are able to see the date and location of events on each card using a calendar and maps feature.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wireframe
 
-### `npm run build`
+![eventsWireframe](https://user-images.githubusercontent.com/110283546/216356338-c00aca08-4872-41fb-90ff-c37f062856c1.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+As you can see from our wireframe, most of our Single Page Application is based around our homepage. Users are able to see featured events on the hero section as well as a spotlight of other top events. The homepage also contains a collapsible grid of events that allow the user to browse all events available as well as carousel of events.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+There is also a nav bar accessible on every page with a search bar, buttons to login/register, or a my profile button if the user is logged in, and a dark mode toggle for photo sensitive users. 
 
-### `npm run eject`
+On the my profile page, the user is able to see the events they are currently signed up to and calendar containing all their event dates.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Component Diagram
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Component diagram goes here
+<img alt="the component diagram for planning our website/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+When we first planned the MVP we created 2 containers - one each for the users and events. However, upon coding, we discovered we needed two more containers to handle a single user (for the my profile page) and a single event (for each event card)
+We had several components implementing a range of features - navBar, userRegistration, eventCard etc
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech Stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+We created our website using ReactJS and JavaScript. We also downloaded a few external libraries to help make our website more intereactive.
 
-### Code Splitting
+The libraries are:
+Leaflet Library - interactive map using OpenStreetMap
+AntDesign - React UI library
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation of React and Libraries
+Installation of ReactJS and external libraries were done in the terminal
 
-### Analyzing the Bundle Size
+`create-react-app Frontend_Events`
+- To create react app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`npm install react react-dom leaflet
+npm install react-leaflet`
+- To install Leaflet library
 
-### Making a Progressive Web App
+`npm i antd`
+- To install AntDesign
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Completed Extensions
 
-### Advanced Configuration
+Several extensions were completed. Including:
+- Hover feature on event cards
+- Adding a map to each event
+- Adding a calendar to each event
+- Pop-up functionality on the login and registration buttons
+- Adding CSS to the My Profile page
+- Accessibility features: Dark Mode (for photo sensitivity) & Tritanopia filter (for red-green colour blindness)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Futher possible extenstions
 
-### Deployment
+If we had more time, there were a few more extensions we would have liked to implement in our code such as:
+- Login authentication
+- Token API to handle login request and user registration
+- Randomisation on featured
+- Countdown feature for each event
+- Find users going to similiar events ("checkout what your friends are doing")
+- More accessibility features (eg, other filters for other forms of colour blindness)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Try out our website
+You are welcome to view our website by cloning this repository using the command
+`git clone git@github.com:caitlinmillar/Frontend_Events.git`
+
+You can then start up the website by using the command
+`npm start`
+
+And load it up on http://localhost:3000.
+
+## Thank you
+
+We like to say a special thank you to all trainers helping us build our wesbite and the rest of cohort for their support :relieved: .
+
+Another special thanks to SAWS for creating an amazing API :kissing_heart: .
