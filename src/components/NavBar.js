@@ -24,42 +24,55 @@ const NavBar = ({element, theme}) => {
         </div>
     )
 
+
+    const myProfile = (
+      <>
+        <MyProfileUserDemo/>
+      </>
+    )
+
     const onChange = (checked) => {
         console.log(`switch to ${checked}`);
       };
 
 
+
     return ( 
         <>
-            <div className={`navbar${theme}`}>
-
-
-                <section className='search'>
-                    <form action=''>
-                        <MDBContainer fluid>
-                            <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
-                                <input className='form-control' placeholder="Find an event" aria-label="Search" type='Search' />
-                                <MDBBtn outline color={`${theme}`}>Search</MDBBtn>
-                            </MDBInputGroup>
-                        </MDBContainer>
-                    </form>
-                </section>
-                <section>
-
-                    <MDBCol>
-                        <Link to="">
-                            <img className={`logo${theme}`} src={logo} width="100" alt="Logo" />
-                        </Link>
-                    </MDBCol>
-                </MDBRow>
-            </form>
-        </><MDBRow size="auto">
-                <MDBBtn outline color='light' type='submit' className='mb-'>My Profile
-                </MDBBtn>
-            </MDBCol></>
-            
+        <div className={`navbar${theme}`}>
+            <section className='search'>
+                <form action=''>
+                    <MDBContainer fluid>
+                        <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
+                        <input className='form-control' placeholder="Find an event" aria-label="Search" type='Search' />
+                        <MDBBtn outline color={`${theme}`}>Search</MDBBtn>
+                        </MDBInputGroup>
+                    </MDBContainer> 
+                </form>
             </section>
-              <section>
+            
+            <section>
+              <MDBCol>
+                <Link to=""> 
+                    <img className={`logo${theme}`} src={logo} width="100"  alt="Logo"/>
+                </Link>
+              </MDBCol>
+
+            </section>
+
+            <MDBRow size="auto">
+                <MDBBtn outline color='light' type='submit' className='mb-'
+                content={myProfile}>
+                  <Link to={"/users/1"}>My Profile</Link>
+                  </MDBBtn>
+            </MDBRow>
+
+            <section className="toggle">
+                {element}
+            </section>
+            
+            <section className="userButtons">
+
 
             <Popover content={registerContent} title="User Registration">
                 <Button type="primary" className="open-register">
@@ -72,6 +85,7 @@ const NavBar = ({element, theme}) => {
                     <Link to={"/login"}>Login</Link>
                 </Button>
             </Popover>
+            </section>
 
         </div>
         </>
