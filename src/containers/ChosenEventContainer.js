@@ -64,13 +64,6 @@ const imageList = [{"id": 1, "url": "https://placebear.com/100/100" }
 {"id": 11, "url": "https://pbs.twimg.com/media/FhnnX7EXgAIvFeo.jpg:large"},
 ]
 
-    // calender
-    const { token } = theme.useToken();
-    const wrapperStyle = {
-      width: 300,
-      border: `1px solid ${token.colorBorderSecondary}`,
-      borderRadius: token.borderRadiusLG,
-    };
     
 return(
     <>
