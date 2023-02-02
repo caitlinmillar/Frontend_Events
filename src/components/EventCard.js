@@ -1,16 +1,12 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
 import Event from "./Event"
 
-const EventCard = ({ eventName, eventDescription }) => {
-    
-    // console.log(eventComponents)
-
+const EventCard = ({eventName, eventDescription }) => {
 
     return(
-        <>
-        {/* //     {eventName} */}
-            {/* {eventDescription} */}
-        </>
+        <div>
+        </div>
     )
 }
 
