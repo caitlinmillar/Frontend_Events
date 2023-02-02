@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import carshow from "./assets/carshow.jpg";
-import paint from "./assets/paint.jpg";
 import pizza from "./assets/pizza.jpg";
 
 const imageList = [{"id": 1, "url": "https://placebear.com/100/100" }
