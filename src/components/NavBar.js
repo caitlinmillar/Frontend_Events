@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import logo from './assets/WOAT.jpeg';
+import logo from './assets/logo-no-background.png';
 import { Button, Popover } from "antd";
 import UserRegistration from "./UserRegistration";
 import UserLogin from "./UserLogin";
 
-import { MDBBtn, MDBInput, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBBtn, MDBInputGroup, MDBRow, MDBCol, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Switch } from 'antd';
 import MyProfileUserDemo from "./MyProfileUserDemo";
 
-const NavBar = () => {
+const NavBar = ({element, theme}) => {
 
     const registerContent = (
         <div>
@@ -24,6 +24,7 @@ const NavBar = () => {
         </div>
     )
 
+
     const myProfile = (
       <>
         <MyProfileUserDemo/>
@@ -35,41 +36,48 @@ const NavBar = () => {
       };
 
 
+
     return ( 
         <>
-        <div className="navbar">
+        <div className={`navbar${theme}`}>
 
 
-            <section className=''>
-
-        <Switch defaultChecked onChange={onChange} />
-          <form action=''>
-            <MDBRow className='d-flex justify-content-center'>
-
-              <MDBCol md='5' start>
-                <MDBInput contrast type='search' label='Search...' className='mb-4' />
-              </MDBCol>
-
-              <MDBCol size="auto">
-                <MDBBtn outline color='light' type='submit' className='mb-'>Go
-                </MDBBtn>
-              </MDBCol>
+            <section className='search'>
+                <form action=''>
+                    <MDBContainer fluid>
+                        <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
+                        <input className='form-control' placeholder="Find an event" aria-label="Search" type='Search' />
+                        <MDBBtn outline color={`${theme}`}>Search</MDBBtn>
+                        </MDBInputGroup>
+                    </MDBContainer> 
+                </form>
+            </section>
+            <section>
 
               <MDBCol>
             <Link to=""> 
-                <img className="logo" src={logo} width="100" height="75"  alt="Logo"/>
+                <img className={`logo${theme}`} src={logo} width="100"  alt="Logo"/>
             </Link>
               </MDBCol>
+
             </MDBRow>
           </form>
         </section>
             <MDBRow size="auto">
                 <MDBBtn outline color='light' type='submit' className='mb-'
-                content={myProfile}>
+                content={myProfile}/>
                   <Link to={"/users/1"}>My Profile</Link>
-                </MDBBtn>
-              </MDBRow>
-              
+
+            </section>
+
+            <section className="toggle">
+                {element}
+            </section>
+        <section className="userButtons">
+
+
+              <section>
+
             <Popover content={registerContent} title="User Registration">
                 <Button type="primary" className="open-register">
                     <Link to={"/register"}>Register</Link>
@@ -77,10 +85,13 @@ const NavBar = () => {
             </Popover> 
             
             <Popover content={loginContent} title="User Login">
-                <button type="primary" className="open-login">
+                <Button type="primary" className="open-login">
                     <Link to={"/login"}>Login</Link>
-                </button>
+                </Button>
             </Popover>
+              </section>
+            
+        </section>
 
         </div>
         </>

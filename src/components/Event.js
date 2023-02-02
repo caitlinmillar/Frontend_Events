@@ -4,7 +4,7 @@ import paint from "./assets/paint.jpg";
 import pizza from "./assets/pizza.jpg";
 
 const imageList = [{"id": 1, "url": "https://placebear.com/100/100" }
-,{"id": 2, "url": paint},
+,{"id": 2, "url": "https://static.designmynight.com/uploads/2022/02/painting-class-london-1-optimised.jpg"},
 {"id": 3, "url": pizza},
 {"id": 4, "url": carshow},
 {"id": 5, "url": "https://adult.activatelearning.ac.uk/app/uploads/2021/03/gen_news_pottery-and-ceramics-classes-scaled.jpg"},
