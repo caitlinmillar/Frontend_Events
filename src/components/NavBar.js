@@ -4,7 +4,10 @@ import { Button, Popover } from "antd";
 import UserRegistration from "./UserRegistration";
 import UserLogin from "./UserLogin";
 
-import { MDBBtn, MDBInputGroup, MDBRow, MDBCol, MDBIcon, MDBContainer } from 'mdb-react-ui-kit';
+
+import { MDBBtn, MDBInputGroup, MDBRow, MDBCol, MDBIcon, MDBContainer,
+    MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem
+ } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Switch } from 'antd';
@@ -41,14 +44,25 @@ const NavBar = ({element, theme}) => {
         <>
         <div className={`navbar${theme}`}>
             <section className='search'>
-                <form action=''>
-                    <MDBContainer fluid>
-                        <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
-                        <input className='form-control' placeholder="Find an event" aria-label="Search" type='Search' />
-                        <MDBBtn outline color={`${theme}`}>Search</MDBBtn>
-                        </MDBInputGroup>
-                    </MDBContainer> 
-                </form>
+                <MDBDropdown>
+                <MDBDropdownToggle tag='a' className='btn btn-primary'>
+                    Find an event!
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                <ul>
+                    <li><Link to={"/events/1"}><MDBDropdownItem tag="span">Paint N Sip</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/2"}><MDBDropdownItem tag="span">Pizza Making</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/3"}><MDBDropdownItem tag="span">LND Motor Show</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/4"}><MDBDropdownItem tag="span">Pottery Class</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/5"}><MDBDropdownItem tag="span">Rollerblading Disco</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/6"}><MDBDropdownItem tag="span">Crochet</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/7"}><MDBDropdownItem tag="span">Diving</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/8"}><MDBDropdownItem tag="span">Head to Head</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/9"}><MDBDropdownItem tag="span">Castle Ghost House</MDBDropdownItem></Link></li>
+                    <li><Link to={"/events/10"}><MDBDropdownItem tag="span">The Best of the 1975</MDBDropdownItem></Link></li>
+                </ul>
+                </MDBDropdownMenu>
+                </MDBDropdown>
             </section>
             
             <section>
@@ -74,6 +88,13 @@ const NavBar = ({element, theme}) => {
                   </MDBBtn>
             </MDBRow>
 
+            <section className="toggle">
+                {element}
+            </section>
+            
+            <section className="userButtons">
+
+
             <Popover content={registerContent} title="User Registration">
                 <Button type="primary" className="open-register">
                     <Link to={"/register"}>Register</Link>
@@ -85,7 +106,9 @@ const NavBar = ({element, theme}) => {
                     <Link to={"/login"}>Login</Link>
                 </Button>
             </Popover>
-            </section>
+              </section>
+            
+        </section>
 
         </div>
         </>
