@@ -66,25 +66,24 @@ const NavBar = ({element, theme}) => {
             </section>
             
             <section className="userButtons">
+                <MDBRow className="profile" size="auto">
+                    <MDBBtn outline color={`${theme}`} type='submit' className='mb-2'
+                    content={myProfile}>
+                    <Link to={"/users/1"}>My Profile</Link>
+                    </MDBBtn>
+                </MDBRow>
 
-            <MDBRow size="auto">
-                <MDBBtn outline color={`${theme}`} type='submit' className='mb-2'
-                content={myProfile}>
-                  <Link to={"/users/1"}>My Profile</Link>
-                  </MDBBtn>
-            </MDBRow>
-
-            <Popover content={registerContent} title="User Registration">
-                <Button type="primary" className="open-register">
-                    <Link to={"/register"}>Register</Link>
-                </Button>
-            </Popover> 
-            
-            <Popover content={loginContent} title="User Login">
-                <Button type="primary" className="open-login">
-                    <Link to={"/login"}>Login</Link>
-                </Button>
-            </Popover>
+                <Popover content={registerContent} title="User Registration">
+                    <Button type="primary" className="open-register">
+                        <Link to={"/register"}>Register</Link>
+                    </Button>
+                </Popover> 
+                
+                <Popover content={loginContent} title="User Login">
+                    <Button type="primary" className="open-login">
+                        <Link to={"/login"}>Login</Link>
+                    </Button>
+                </Popover>
             </section>
 
         </div>

@@ -83,7 +83,7 @@ useEffect(() => {
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
             <Route path="/register" element={<UserRegistration postUser={postUser}/>}/>
             <Route path="login" element={<UserLogin/>}/>            
-            <Route path='/merch' element={<Merch/>}/>
+            <Route path='/merch' theme={theme} element={<Merch/>}/>
             <Route path="/users" element={<UserContainer/>}/>
 
     </Routes>

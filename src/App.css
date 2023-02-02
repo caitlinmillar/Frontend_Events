@@ -56,11 +56,10 @@
 /* NavBar buttons */
 .toggle {
   translate: 100px 15px;
-
 }
 
-.userButton {
-  display: flex;
+.profile {
+  color: aliceblue;
   justify-content: space-evenly;
 }
 
@@ -281,4 +280,17 @@ filter: contrast(75%);
 /* ======== Tritanopia ======================= */
 .AppCBOff {
   filter: hue-rotate(30deg) grayscale(57%);
+}
+
+/* ======== MERCH ============================ */
+.merchdark, .merchlight {
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffda60;
+  background: linear-gradient(90deg, #4099fe 0%, #bddcff 100%);
+}
+
+.merch img {
+  /* border-radius: 10px; */
+  height: 500px;
 }

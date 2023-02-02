@@ -14,17 +14,59 @@ const images = [
     {"id" : 6, "url": pic6},
 ]
 
-const Merch = () => {
+const Merch = ({theme}) => {
 
     return(
-    <div>
-        <h1>Check out our awesome merch line</h1>
-        <img src={pic1}/>
-        <img src={pic2}/>
-        <img src={pic3}/>
-        <img src={pic4}/>
-        <img src={pic5}/>
-        <img src={pic6}/>
+    <div className={`merch${theme}`}>
+        <h1 className="header">Check out our awesome merch line</h1>
+        <div className="images">
+        <section class="">
+
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-lg-6 vh-100 bg-light">
+                    <div class="vh-100 bg">
+                        <img src={pic1} />
+                    </div>
+                </div>
+                <div class="col-lg-6 vh-100 bg-dark">
+                    <div class="vh-100 bg-warning">
+                        <img src={pic2}/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-lg-6 vh-100 bg-light">
+                    <div class="vh-100 bg">
+                        <img src={pic3}/>
+                    </div>
+                </div>
+                <div class="col-lg-6 vh-100 bg-dark">
+                    <div class="vh-100 bg-warning">
+                        <img src={pic4}/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-lg-6 vh-100 bg-light">
+                    <div class="vh-100 bg">
+                        <img src={pic5}/>
+                    </div>
+                </div>
+                <div class="col-lg-6 vh-100 bg-dark">
+                    <div class="vh-100 bg-warning">
+                        <img src={pic6}/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+        </div>
     </div>
     )
     
