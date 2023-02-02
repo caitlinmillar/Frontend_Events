@@ -1,35 +1,35 @@
-.Featured {
-  width: 100%;
-  height: 500px;
-}
-.Featured img {
-width: 100%; 
-height: 400px; 
-object-fit: cover;
-object-position: 25% 70%; 
-filter: contrast(75%);
-}
-
-.Featured img:hover{
-  transform: scale(1.1);
-  transition: 0.5s;
-  filter: contrast(100%);
-}
 
 .carousel-events {
   display: flexbox;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
-.navbar {
-  display: flex;
+/* Navigation Bar */
+.navbarlight {
   height: 75px;
   background-color: #4894ea;
   max-width: 100%;
   padding: 1rem;
-  align-content: center;
   position:inherit;
+}
+.navbardark {
+  background-color: #305988fe;
+  width: 100%;
+  padding: 1rem;
+  position:inherit;
+}
+.navbardark, .navbarlight {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-content: center;
+  
+}
+
+/* NavBar: search */
+.search {
+  translate: -100px 15px;
 }
 
 .d-flex justify-content-center {
@@ -41,9 +41,63 @@ filter: contrast(75%);
   margin: auto;
   
 }
+/* NavBar Logo */
+.logodark:hover, .logolight:hover {
+  transform: scale(1.1);
+  filter: hue-rotate(1090deg);
+  transition: 2s;
+} 
+
+.logodark, .logolight {
+  translate: -10px;
+  transform: scale(0.5);
+}
+
+/* NavBar buttons */
+.toggle {
+  translate: 100px 15px;
+
+}
+
+.userButton {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Featured event sections */
+.Featured {
+  width: 100%;
+  height: 500px;
+}
+.Featured img {
+width: 100%; 
+height: 350px; 
+object-fit: cover;
+object-position: 25% 70%; 
+filter: contrast(75%);
+}
+
+.Featured img:hover{
+  transform: scale(1.03);
+  transition: 0.5s;
+  filter: contrast(100%);
+}
+/* Events Listings */
 
 .list .panel-header {
   color: white;
+}
+.listdark, .listlight {
+  padding: 30px;
+  margin-top: -10rem;
+}
+
+.listdark{
+  background-color: #305988fe;
+}
+
+.listlight{
+  background-color: #4894ea;
 }
 
 .showAll{
@@ -73,7 +127,8 @@ filter: contrast(75%);
   height: 150px;
   object-fit: cover;
   filter: contrast(75%);
-  
+  border-radius: 0.2rem;
+  transform: scale(1.1);
 }
 
 .Event img:hover {
@@ -81,7 +136,7 @@ filter: contrast(75%);
 }
 .list {
   background-color: #4894ea;
-  background-image: url("https://cdn.shopify.com/s/files/1/0268/0307/7299/products/LH900109---Boho---Whale-Of-A-Times-Deep-Sea-Blue_1000x.jpg?v=1614282229");
+  /* background-image: url("https://cdn.shopify.com/s/files/1/0268/0307/7299/products/LH900109---Boho---Whale-Of-A-Times-Deep-Sea-Blue_1000x.jpg?v=1614282229"); */
   filter: hue-rotate(10%);
   padding-right: 25px;
   padding-left: 25px;
@@ -89,10 +144,6 @@ filter: contrast(75%);
   margin-top: -100px;
 }
 
-.logo:hover {
-  transform: scale(1.1);
-  transition: 0.1s;
-}
 
 .show-btn {
   transform: scale(1.1);
@@ -108,7 +159,7 @@ filter: contrast(75%);
 
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .logodark, .logolight {
     animation: App-logo-spin infinite 20s linear;
   }
 }
@@ -180,3 +231,6 @@ filter: contrast(75%);
   transition: 0.2s;
 }
 
+.AppCBOn {
+  filter: hue-rotate(30deg) grayscale(57%);
+}
