@@ -29,8 +29,10 @@ On the my profile page, the user is able to see the events they are currently si
 Component diagram goes here
 <img alt="the component diagram for planning our website/>
 
-When we first planned the MVP we created 2 containers - one each for the users and events. However, upon coding, we discovered we needed two more containers to handle a single user (for the my profile page) and a single event (for each event card)
-We had several components implementing a range of features - navBar, userRegistration, eventCard etc
+When we first planned the MVP we created 2 containers - one each for the users and events. However, upon coding, we discovered we needed two more containers to handle a single user (for the my profile page) and a single event (for each event card).
+
+
+We had several components implementing a range of features - including, but limited to, the navBar, userRegistration, eventCard and more.
 
 
 ## Tech Stack
