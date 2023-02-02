@@ -60,12 +60,6 @@ const NavBar = ({element, theme}) => {
 
             </section>
 
-            <MDBRow size="auto">
-                <MDBBtn outline color='light' type='submit' className='mb-'
-                content={myProfile}>
-                  <Link to={"/users/1"}>My Profile</Link>
-                  </MDBBtn>
-            </MDBRow>
 
             <section className="toggle">
                 {element}
@@ -73,6 +67,12 @@ const NavBar = ({element, theme}) => {
             
             <section className="userButtons">
 
+            <MDBRow size="auto">
+                <MDBBtn outline color='light' type='submit' className='mb-'
+                content={myProfile}>
+                  <Link to={"/users/1"}>My Profile</Link>
+                  </MDBBtn>
+            </MDBRow>
 
             <Popover content={registerContent} title="User Registration">
                 <Button type="primary" className="open-register">
