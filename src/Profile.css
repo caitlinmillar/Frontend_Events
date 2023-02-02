@@ -24,7 +24,6 @@
 }
 
 .user-email-address{
-    padding: 1%;
     padding-right: 20110%;
     color: rgb(255, 255, 255);
 }
@@ -72,8 +71,11 @@
 }
 
 .text{
-    grid-area: footer;
-    display: contents;
-    padding: 1px;
-    color: black;
+    
+    display: flex;
+    padding-top: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: larger;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }

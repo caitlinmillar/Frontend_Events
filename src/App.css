@@ -296,3 +296,10 @@ filter: contrast(75%);
   /* border-radius: 10px; */
   height: 500px;
 }
+
+h3 >a{
+  display: flex;
+  justify-content: center;
+  zoom: 0.9;
+}
+

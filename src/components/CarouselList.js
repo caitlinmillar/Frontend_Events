@@ -9,23 +9,11 @@ import pic3 from "./merchImages/3.png";
 import pic4 from "./merchImages/4.png";
 
 const contentStyle = {
-    maxHeight: '10%',
-    color: '#fffff',
-    lineHeight: '260px',
+    margin: 0,
+    height: '260px',
+    maxHeight: '100%',
     background: '#364d79',
-    maxWidth: "100%",
-    padding: "100px 100px 100px",
-    textAlign: "center",
   };
-
-  const merchStyle={
-    color: 'white',
-    background: '#364d79',
-    margin: "0 ",
-    textAlign: "center",
-    fontSize: '70px',
-    padding: '80px'
-  }
 
 
   const images = [
@@ -43,7 +31,6 @@ const CarouselList = () => {
     
     const onChange = (currentSlide) => {
         console.log(currentSlide);
-
     }
 
     const [dotPosition, setDotPosition] = useState('right');
@@ -58,13 +45,13 @@ const CarouselList = () => {
         onChange={handlePositionChange}
         value={dotPosition}  
       >
-        
       </Radio.Group>
+  
         <Carousel dotPosition={dotPosition} afterChange={onChange}>
-        <div className='imagelist'>  <p style={merchStyle}>Check out our merch!</p> 
-            <h3 style={contentStyle} className="pic1">
+        <div className='imagelist'> 
+            <h3  className="pic1"style={contentStyle}>
                 <Link to="/merch">
-                    <img src={pic1}/> </Link>
+                    <img src={pic1}/></Link>
                     </h3>      
         </div>
         <div>
