@@ -88,7 +88,7 @@ useEffect(() => {
 
     </Routes>
     <Footer theme={theme} element={
-      <Switch defaultChecked onChange={switchTheme}/>}/>
+      <Switch onChange={switchTheme}/>}/>
     </>
 </BrowserRouter>
     </div>
