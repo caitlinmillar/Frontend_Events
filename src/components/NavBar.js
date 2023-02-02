@@ -68,7 +68,7 @@ const NavBar = ({element, theme}) => {
             <section className="userButtons">
 
             <MDBRow size="auto">
-                <MDBBtn outline color='light' type='submit' className='mb-'
+                <MDBBtn outline color={`${theme}`} type='submit' className='mb-2'
                 content={myProfile}>
                   <Link to={"/users/1"}>My Profile</Link>
                   </MDBBtn>

@@ -246,7 +246,7 @@ filter: contrast(75%);
   transition: 0.2s;
 }
 
-.AppCBOn {
+.AppCBOff {
   filter: hue-rotate(30deg) grayscale(57%);
 }
 .calender {
