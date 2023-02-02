@@ -13,16 +13,15 @@ const ExpandingList = ({ events }) => {
         return <Event event = {event} key={id} name = {event.eventName}/>
     })
 
-
-    const onDropdownChange = (key) => {
+    const onDropdownChange = ({key}) => {
         console.log(key);} 
 
     return (
     <>
     <div className="list">
-        <Collapse ghost="true"bordered="false" collapsible= "header" onChange={onDropdownChange}>
+        <Collapse ghost="true" bordered="true" collapsible= "header" onChange={onDropdownChange}>
             <div className="initialList">{initialList}</div>
-            <Panel className="showAll" header="show all"  key="1">
+            <Panel header="show all" key={1}>
                 <div className="expandedList">{expandedList}</div>
             </Panel>
         </Collapse>   
