@@ -14,37 +14,48 @@ const onPanelChange = (value, mode) => {
 
 const ChosenEventContainer = () => {
     const [event, setEvent] = useState("");
-    // const [countdown, setCountdown] = useState(null);
     let {id} = useParams();
     
-    // useEffect(() => {
-    //     fetch(`http://localhost:8080/events/` + id,{
-    //         method: "GET",
-    //         headers: {'Content-Type': 'application/json'}
-    //     })
-    //     .then(response => response.json())
-    //     .then((response) => setEvent(response))
-    // }, [])
-    
-    // useEffect(() => {
-    //     fetch(`http://localhost:8080/events/days-until/` + id,{
-    //         method: "GET",
-    //         headers: {'Content-Type': 'application/json'}
-    //     })
-    //     .then(response => response.json())
-    //     .then((response) => setCountdown(response))
-    // }, [])
-    
     useEffect(() => {
-        const fetchEventData = async () =>{
-        const response = await fetch(`http://localhost:8080/events/` + id);
-        const event = await response.json();
-        setEvent(event);
-        }
-        fetchEventData()
+        fetch(`http://localhost:8080/events/` + id,{
+            method: "GET",
+            headers: {'Content-Type': 'application/json'}
+        })
+        .then(response => response.json())
+        .then((response) => setEvent(response))
     }, [])
 
- 
+    const [countdown, setCountdown] = useState(null);
+
+    useEffect(() => {
+        fetch(`http://localhost:8080/events/days-until/1`,{
+            method: "GET",
+            headers: {'Content-Type': 'application/json'}
+        })
+        .then(response => response.json())
+        .then((response) => setCountdown(response))
+    }, [])
+    
+    // useEffect(() => {
+    //     const fetchEventData = async () =>{
+    //     const response = await fetch(`http://localhost:8080/events/` + id);
+    //     const event = await response.json();
+    //     setEvent(event);
+    //     }
+    //     fetchEventData()
+    // }, [])
+
+  
+    // useEffect(() => {
+    //     const fetchCountdown = async () =>{
+    //     const response = await fetch(`http://localhost:8080/events/days-until/1`);
+    //     const countdown = await response.text();
+    //     const result = await console.log(result);
+    //     setCountdown(countdown);
+    //     }
+    //     fetchCountdown()
+    // }, [])
+
     
    
 
@@ -81,39 +92,45 @@ const ChosenEventContainer = () => {
             <div className="parent">
             <div className="child">
                 <div className="leftChild">
-                <h4 className="eventName">{event.eventName}</h4>
-                <p className="date">{event.date}</p>
+                <h3 className="eventName">{event.eventName}</h3>
                 <h5 className="description">{event.eventDescription}</h5>
+                <p className="date">{event.date}</p>
+
+                <p className="location">📍 {event.eventLocation}</p>
+
+                <p className="startTime">🕒 {event.startTime}-{event.endTime}</p>
                 <p className="capacity">Capacity: {event.capacity}</p>
-                <EventCard>event={countdown}
-                </EventCard>
+                <button className="getTicketsButton">Get tickets</button>
+
+                <p>{countdown}</p>
             </div>              
             </div>              
 
             <div className="child">
-                <button className="getTicketsButton">Get tickets</button>
-                <p className="location">📍 {event.eventLocation}</p>
-                <p className="startTime">🕒 {event.startTime}-{event.endTime}</p>
-            </div>
             <div className="calender" style={wrapperStyle}>
-            <Calendar fullscreen={false} onPanelChange={onPanelChange} />
-            </div>   
+                <Calendar fullscreen={false} onPanelChange={onPanelChange} />
+                </div>  
+                
             </div>
 
+           
+            </div>
+            
             <div className="map">
-            <MapContainer center={[51.523, -0.07579]} zoom={13} >
-  
-            <TileLayer
-            attribution='&copy; <a 
-            href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
-            />
-             <Marker position={[51.523, -0.07579]}>
-                <Popup>
-                    Location!
-                </Popup>
-            </Marker>
-            </MapContainer>
+                <MapContainer center={[51.523, -0.07579]} zoom={13} >
+    
+                <TileLayer
+                attribution='&copy; <a 
+                href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={[51.523, -0.07579]}>
+                    <Popup>
+                        Location!
+                    </Popup>
+                </Marker>
+                </MapContainer>
+                
             </div>
                  
          

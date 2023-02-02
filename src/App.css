@@ -125,6 +125,8 @@ object-position: 25% 70%;
 
 .description {
   margin-left: 30px;
+  text-align: left;
+
 }
 .parent {
   margin: 1rem;
@@ -133,7 +135,7 @@ object-position: 25% 70%;
 }
 .child {
   display: inline-block;
-  border: 2px solid black;
+  border: 0px solid black;
   padding: 50px;
   margin: 30px;
   vertical-align: middle;
@@ -143,7 +145,10 @@ object-position: 25% 70%;
 }
 .capacity {
   border: 2px solid black;
-  border-radius: 15px;
+  border-radius: 5px;
+}
+.location {
+  padding-top: 10px;
 }
 
 .getTicketsButton {
@@ -152,7 +157,7 @@ object-position: 25% 70%;
   color: white;
   border-radius: 15px;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 6px 55px;
   text-align: center;
   font-size: 20px;
 }
