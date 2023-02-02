@@ -78,7 +78,7 @@ useEffect(() => {
     
     <Routes>
             <Route path="" element={<><Featured theme={theme} className="Featured"/><EventContainer theme={theme} /><CarouselList/></>} />
-            <Route path="/events/:id" element={<ChosenEventContainer/>} />
+            <Route path="/events/:id" element={<ChosenEventContainer darkTheme={theme}/>} />
             <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
             <Route path="/register" element={<UserRegistration postUser={postUser}/>}/>

@@ -1,5 +1,5 @@
-import { useState, useEffect, createRoot} from "react";
-import { BrowserRouter, Routes, Route, Link, useLocation, useParams } from "react-router-dom";
+import { useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
 import carshow from "./eventImages/carshow.jpg";
 import pizza from "./eventImages/pizza.jpg";
 import { Calendar,theme } from "antd";
@@ -7,11 +7,12 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 
 
+const ChosenEventContainer = ({darkTheme}) => {
+
 // ---- EVENT ------
 // Event: useState
-    const ChosenEventContainer = () => {
-        const [event, setEvent] = useState("");
-        let {id} = useParams();
+    const [event, setEvent] = useState("");
+    let {id} = useParams();
     
 // Event: useEffect Fetch for Event by Id    
     useEffect(() => {
@@ -67,14 +68,14 @@ const imageList = [{"id": 1, "url": "https://placebear.com/100/100" }
 return(
     <>
         {event ?  
-        <div className="eventCard">            
+        <div className={`eventCard${darkTheme}`}>            
             <h2 className="eventCardName">{event.eventName}</h2>
             <div className="eventImage">
                 <img src={imageList[event.id].url} alt="featured event" />
             </div>
             <div className="parent">
                 <div className="child">
-                    <div className="leftChild">
+                    <div className={`leftChild${darkTheme}`}>
                         <h3 className="eventName">{event.eventName}</h3>
                         <h5 className="description">{event.eventDescription}</h5>
                         <p className="date">{event.date}</p>
