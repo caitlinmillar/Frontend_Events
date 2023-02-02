@@ -110,30 +110,40 @@ object-position: 25% 70%;
 }
 
 /* =========== Event Card =======================*/
-.eventImage {
-  display: flex;
-  border: 15px solid rgb(50, 86, 155);
+.eventImage img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
 }
 
 .eventCardName {
   font-size: 70px;
-  margin-left: 30px;
-  /* margin-bottom: 30px; */
+  margin-left: 60px;
+  padding: 20px;
 }
 
 .description {
   margin-left: 30px;
 }
-
-.leftChild {
+.parent {
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.child {
   display: inline-block;
-  border: 3px solid rgb(50, 86, 155);
+  border: 2px solid black;
   padding: 50px;
   margin: 30px;
   vertical-align: middle;
+}
+.eventName .date {
+  border: 2px solid black;
+}
+.capacity {
+  border: 2px solid black;
   border-radius: 15px;
-
-  /* text-align: center; */
 }
 
 .getTicketsButton {
@@ -142,7 +152,7 @@ object-position: 25% 70%;
   color: white;
   border-radius: 15px;
   font-weight: bold;
-  padding: 15px 30px;
+  padding: 10px 15px;
   text-align: center;
   font-size: 20px;
 }
@@ -152,3 +162,17 @@ object-position: 25% 70%;
   transition: 0.2s;
 }
 
+.calender {
+  padding: 0px;
+}
+
+/* ============ MAP ========================== */
+
+.leaflet-container {
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+}
+.map {
+  height: 100%;
+}
