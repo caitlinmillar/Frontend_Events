@@ -1,4 +1,5 @@
 import './App.css';
+import './Profile.css';
 import EventContainer from './containers/EventContainer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ChosenEventContainer from './containers/ChosenEventContainer';
@@ -12,7 +13,7 @@ import UserRegistration from './components/UserRegistration';
 import {useState} from 'react';
 import UserLogin from './components/UserLogin';
 import Merch from './components/Merch';
-import MyProfileUserDemo from './components/MyProfileUserDemo';
+
 
 function App() {
 
@@ -42,7 +43,6 @@ function App() {
             <Route path="login" element={<UserLogin/>}/>            
             <Route path='/merch' element={<Merch/>}/>
             <Route path="/users" element={<UserContainer/>}/>
-            <Route path='/users/1' element={<MyProfileUserDemo users={users}/>}/>
 
     </Routes>
     <Footer/>
