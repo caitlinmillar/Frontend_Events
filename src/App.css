@@ -174,7 +174,9 @@ filter: contrast(75%);
     transform: rotate(360deg);
   }
 }
-
+.search {
+  z-index: 99;
+}
 /* =========== Event Card =======================*/
 .eventImage img{
   display: block;
@@ -217,7 +219,7 @@ filter: contrast(75%);
   translate: 45px;
 }
 .location {
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .getTicketsButton {
