@@ -8,7 +8,7 @@ import ExpandingList from "../components/ExpandingList";
 
 
 
-const EventContainer = () => {
+const EventContainer = ({theme}) => {
 
     const SERVER_URL = `http://localhost:8080`
     
@@ -26,7 +26,7 @@ const EventContainer = () => {
         <>
        <div className="carousel-events">
      {/* <Spotlight events={events}/> */}
-       <ExpandingList className="ExpandingList" events={events}/>
+       <ExpandingList theme={theme}  className="ExpandingList" events={events}/>
 
        </div>
        </>

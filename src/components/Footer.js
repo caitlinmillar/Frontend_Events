@@ -1,13 +1,17 @@
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useEffect, useState } from 'react';
 
-const Footer = () => {
+const Footer = ({theme}) => {
     
-    return ( 
+   
+        return ( 
 
-        <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+        <MDBFooter bgColor={`${theme}`} className='text-center text-lg-start text-muted'>
+
         <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+            
           <div className='me-5 d-none d-lg-block'>
             <span>Find us on social networks:</span>
           </div>

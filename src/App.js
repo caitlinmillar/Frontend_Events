@@ -9,9 +9,10 @@ import UserContainer from './containers/UserContainer';
 import ChosenUserContainer from './containers/ChosenUserContainer';
 import CarouselList from './components/CarouselList';
 import UserRegistration from './components/UserRegistration';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import UserLogin from './components/UserLogin';
 import Merch from './components/Merch';
+import { Switch } from 'antd';
 
 function App() {
 
@@ -27,13 +28,34 @@ function App() {
     setUsers([...users, registeredUser])
 }
 
+  const [theme, setTheme] = useState(
+      localStorage.getItem('theme') || 'light'
+    );
+
+  const toggleTheme = () => {
+      if (theme === 'light') {
+      setTheme('dark');
+      } else {
+      setTheme('light');
+      }
+    };
+
+  useEffect(() => {
+      localStorage.setItem('theme', theme);
+      document.body.className = theme;
+  }, [theme]);
+  
+
+
   return (
     <BrowserRouter>
     <>
-    <NavBar/>
+    <NavBar theme={theme} element={
+      <Switch defaultChecked onChange={toggleTheme} />
+    }/>
     
     <Routes>
-            <Route path="" element={<><Featured className="Featured"/><EventContainer/><CarouselList/></>} />
+            <Route path="" element={<><Featured theme={theme} className="Featured"/><EventContainer theme={theme} /><CarouselList/></>} />
             <Route path="/events/:id" element={<ChosenEventContainer/>} />
             <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
@@ -43,7 +65,7 @@ function App() {
             <Route path="/users" element={<UserContainer/>}/>
 
     </Routes>
-    <Footer/>
+    <Footer theme={theme}/>
     </>
 </BrowserRouter>
   );
