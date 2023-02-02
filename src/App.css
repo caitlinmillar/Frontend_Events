@@ -6,7 +6,6 @@
 }
 /* Navigation Bar */
 .navbarlight {
-  display: flex;
   height: 75px;
   background-color: #4894ea;
   max-width: 100%;
@@ -130,7 +129,6 @@ filter: contrast(75%);
   filter: contrast(75%);
   border-radius: 0.2rem;
   transform: scale(1.1);
-  /* filter: drop-shadow(16px 16px 20px red) invert(75%); */
 }
 
 .Event img:hover {
@@ -233,3 +231,6 @@ filter: contrast(75%);
   transition: 0.2s;
 }
 
+.AppCBOn {
+  filter: hue-rotate(30deg) grayscale(57%);
+}

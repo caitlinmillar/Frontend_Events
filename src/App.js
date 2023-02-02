@@ -45,9 +45,29 @@ function App() {
       document.body.className = theme;
   }, [theme]);
   
+// Colour Blind Functionality
 
+const [colourBlindTheme, setColourBlindTheme] = useState(
+  localStorage.getItem('CBTheme') || 'CBOff'
+);
+
+const switchTheme = () => {
+  if (colourBlindTheme === 'CBOff') {
+  setColourBlindTheme('CBOn');
+  console.log(colourBlindTheme);
+  } else {
+  setColourBlindTheme('CBOff');
+  console.log(colourBlindTheme);
+  }
+};
+
+useEffect(() => {
+  localStorage.setItem('CBTheme', colourBlindTheme);
+  document.body.className = colourBlindTheme;
+}, [colourBlindTheme]);
 
   return (
+    <div className={`App${colourBlindTheme}`}>
     <BrowserRouter>
     <>
     <NavBar theme={theme} element={
@@ -65,9 +85,11 @@ function App() {
             <Route path="/users" element={<UserContainer/>}/>
 
     </Routes>
-    <Footer theme={theme}/>
+    <Footer theme={theme} element={
+      <Switch defaultChecked onChange={switchTheme}/>}/>
     </>
 </BrowserRouter>
+    </div>
   );
 }
 

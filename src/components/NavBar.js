@@ -69,9 +69,9 @@ const NavBar = ({element, theme}) => {
             </Popover> 
             
             <Popover content={loginContent} title="User Login">
-                <button type="primary" className="open-login">
+                <Button type="primary" className="open-login">
                     <Link to={"/login"}>Login</Link>
-                </button>
+                </Button>
             </Popover>
               </section>
             
