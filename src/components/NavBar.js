@@ -40,8 +40,6 @@ const NavBar = ({element, theme}) => {
     return ( 
         <>
         <div className={`navbar${theme}`}>
-
-
             <section className='search'>
                 <form action=''>
                     <MDBContainer fluid>
@@ -52,29 +50,28 @@ const NavBar = ({element, theme}) => {
                     </MDBContainer> 
                 </form>
             </section>
+            
             <section>
-
               <MDBCol>
-            <Link to=""> 
-                <img className={`logo${theme}`} src={logo} width="100"  alt="Logo"/>
-            </Link>
+                <Link to=""> 
+                    <img className={`logo${theme}`} src={logo} width="100"  alt="Logo"/>
+                </Link>
               </MDBCol>
 
-            </MDBRow>
-          </form>
-        </section>
+            </section>
+
             <MDBRow size="auto">
                 <MDBBtn outline color='light' type='submit' className='mb-'
-                content={myProfile}/>
+                content={myProfile}>
                   <Link to={"/users/1"}>My Profile</Link>
-
-            </section>
+                  </MDBBtn>
+            </MDBRow>
 
             <section className="toggle">
                 {element}
             </section>
-        <section className="userButtons">
-
+            
+            <section className="userButtons">
 
               <section>
 
