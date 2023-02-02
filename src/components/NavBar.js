@@ -8,6 +8,7 @@ import { MDBBtn, MDBInput, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Switch } from 'antd';
+import MyProfileUserDemo from "./MyProfileUserDemo";
 
 const NavBar = () => {
 
@@ -21,6 +22,12 @@ const NavBar = () => {
         <div>
             <UserLogin/>
         </div>
+    )
+
+    const myProfile = (
+      <>
+        <MyProfileUserDemo/>
+      </>
     )
 
     const onChange = (checked) => {
@@ -57,7 +64,9 @@ const NavBar = () => {
           </form>
         </section>
             <MDBRow size="auto">
-                <MDBBtn outline color='light' type='submit' className='mb-'>My Profile
+                <MDBBtn outline color='light' type='submit' className='mb-'
+                content={myProfile}>
+                  <Link to={"/users/1"}>My Profile</Link>
                 </MDBBtn>
               </MDBRow>
               
