@@ -8,6 +8,7 @@ import { MDBBtn, MDBInputGroup, MDBRow, MDBCol, MDBIcon, MDBContainer } from 'md
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Switch } from 'antd';
+import MyProfileUserDemo from "./MyProfileUserDemo";
 
 const NavBar = ({element, theme}) => {
 
@@ -22,6 +23,19 @@ const NavBar = ({element, theme}) => {
             <UserLogin/>
         </div>
     )
+
+
+    const myProfile = (
+      <>
+        <MyProfileUserDemo/>
+      </>
+    )
+
+    const onChange = (checked) => {
+        console.log(`switch to ${checked}`);
+      };
+
+
 
     return ( 
         <>
@@ -45,6 +59,15 @@ const NavBar = ({element, theme}) => {
                 <img className={`logo${theme}`} src={logo} width="100"  alt="Logo"/>
             </Link>
               </MDBCol>
+
+            </MDBRow>
+          </form>
+        </section>
+            <MDBRow size="auto">
+                <MDBBtn outline color='light' type='submit' className='mb-'
+                content={myProfile}/>
+                  <Link to={"/users/1"}>My Profile</Link>
+
             </section>
 
             <section className="toggle">
@@ -52,14 +75,7 @@ const NavBar = ({element, theme}) => {
             </section>
         <section className="userButtons">
 
-            <section>
 
-            <MDBCol size="auto">
-                <MDBBtn outline color={`${theme}`} type='submit' className='mb-'>My Profile
-                </MDBBtn>
-              </MDBCol>
-            
-            </section>
               <section>
 
             <Popover content={registerContent} title="User Registration">

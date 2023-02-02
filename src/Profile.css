@@ -1,0 +1,79 @@
+
+
+.userDiv{
+    background: linear-gradient(90deg, #5f6bc7 0%, #A0CDFF 100%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    margin: 0px 0px;
+    padding: 10%;
+}
+
+.username{
+    box-sizing: border-box;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    color: white;
+    background-color: transparent;
+    grid-area: header;
+    letter-spacing: 3px;
+}
+
+.user-email-address{
+    padding: 1%;
+    padding-right: 20110%;
+    color: rgb(255, 255, 255);
+}
+
+.upcoming-events{
+    grid-area: main;
+    letter-spacing: 3px;
+    color: white;
+    color: #242424;
+    background-color: #1bbefe;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+}
+
+ul{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+    padding: 150px 0px;
+    background-image: url(./components/assets/paint.jpg) ;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: relative;
+    max-width: 900px; 
+
+}
+
+.event-name{
+    text-align: center;
+    text-decoration: solid;
+    text-transform: uppercase;
+    font-size: 80px;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1; 
+    width: 90%; 
+    padding: 0px; 
+    padding-left: 10px;
+    padding-right: 20px;
+    bottom: 0px; 
+}
+
+.text{
+    grid-area: footer;
+    display: contents;
+    padding: 1px;
+    color: black;
+}

@@ -1,4 +1,5 @@
 import './App.css';
+import './Profile.css';
 import EventContainer from './containers/EventContainer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ChosenEventContainer from './containers/ChosenEventContainer';
@@ -13,6 +14,7 @@ import {useEffect, useState} from 'react';
 import UserLogin from './components/UserLogin';
 import Merch from './components/Merch';
 import { Switch } from 'antd';
+
 
 function App() {
 
@@ -80,8 +82,8 @@ useEffect(() => {
             <Route path="/users" element={<UserContainer users={users} setUsers={setUsers} postUser={postUser}/>}/>
             <Route path="/users/:id" element={<ChosenUserContainer/>} />
             <Route path="/register" element={<UserRegistration postUser={postUser}/>}/>
-            <Route path="login" element={<UserLogin/>}/>            <Route path='/merch' element={<Merch/>}/>
-
+            <Route path="login" element={<UserLogin/>}/>            
+            <Route path='/merch' element={<Merch/>}/>
             <Route path="/users" element={<UserContainer/>}/>
 
     </Routes>

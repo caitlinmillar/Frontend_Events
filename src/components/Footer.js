@@ -15,7 +15,7 @@ const Footer = ({theme, element}) => {
       <p>Tritanopia: {element} </p>
             
           <div className='me-5 d-none d-lg-block'>
-            <span>Find us on social networks:</span>
+            <span>Follow us on social media:</span>
           </div>
   
           <div>
