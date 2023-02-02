@@ -128,7 +128,9 @@ filter: contrast(75%);
   height: 150px;
   object-fit: cover;
   filter: contrast(75%);
-  
+  border-radius: 0.2rem;
+  transform: scale(1.1);
+  /* filter: drop-shadow(16px 16px 20px red) invert(75%); */
 }
 
 .Event img:hover {
