@@ -49,18 +49,32 @@
 } 
 
 .logodark, .logolight {
-  translate: -10px;
+  translate: 90px;
   transform: scale(0.5);
 }
 
 /* NavBar buttons */
 .toggle {
-  translate: 100px 15px;
+  translate: 210px 15px;
 }
 
 .profile {
-  color: aliceblue;
-  justify-content: space-evenly;
+background-color: rgb(156, 208, 254);
+border-radius: 10px;
+margin-bottom: 7px;
+translate: 100px;
+}
+
+.register {
+  border-color: #0a121c;
+  margin-right: 5px;
+  translate: 100px;
+}
+.open-login {
+  border-color: #0a121c;
+  margin-left: 5px;
+  translate: 100px;
+
 }
 
 /* Featured event sections */
