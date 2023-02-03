@@ -7,8 +7,10 @@ const Featured = ({theme}) => {
     <>
         <div className="Featured">
             <Link to={`/events/2`}>
-                <img src={featured}  alt="featured event"/>
-                {/* <h1>Take a look at our featured event!</h1> */}
+            <div className="overlay">
+                    <h1>Take a look at our featured event!</h1>
+                    <img src={featured}  alt="featured event"/>
+            </div>
             </Link>
             
             </div>

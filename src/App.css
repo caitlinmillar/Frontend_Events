@@ -296,3 +296,15 @@ filter: contrast(75%);
   /* border-radius: 10px; */
   height: 500px;
 }
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay >h1 {
+  position: absolute;
+  z-index: 1;
+
+}
