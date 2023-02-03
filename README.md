@@ -91,6 +91,10 @@ You can then start up the website by using the command
 
 And load it up on http://localhost:3000.
 
+You will also need to git clone the API repo and create a database in the terminal to run the backend API.
+
+Here is a link to the backend API - https://github.com/rimmderes/EventsCalenderProject for you to clone.
+
 ## Thank you
 
 We like to say a special thank you to all trainers helping us build our wesbite and the rest of cohort for their support :relieved: .
