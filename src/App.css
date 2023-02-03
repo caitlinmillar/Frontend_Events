@@ -216,7 +216,9 @@ filter: contrast(75%);
   border: 2px solid black;
   border-radius: 5px;
   width: 150px;
-  translate: 45px;
+  /* translate: 160px; */
+  margin: auto;
+  margin-bottom: 20px;
 }
 .location {
   padding-top: 15px;
