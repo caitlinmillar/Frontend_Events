@@ -290,11 +290,47 @@ filter: contrast(75%);
 .merchdark, .merchlight {
   display: flex;
   flex-wrap: wrap;
-  color: #ffda60;
+  color: #ffe9a0;
+}
+
+.merchdark h1, .merchlight h1 {
+  margin: 10px;
+}
+
+.merchdark img, .merchlight img {
+  border-radius: 100px;
+  transform: scale(0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.merchdark {
+  background: linear-gradient(90deg, #18416f 0%, #0a121c 100%);
+
+}
+
+.merchlight {
   background: linear-gradient(90deg, #4099fe 0%, #bddcff 100%);
 }
 
-.merch img {
-  /* border-radius: 10px; */
-  height: 500px;
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay>h1 {
+  position: absolute;
+  z-index: 1;
+  background-color: #e3bd6961;
+  border-radius: 10px;
+  padding: 10px;
+  filter: drop-shadow(1px 16px 30px rgb(242, 246, 131));
+}
+
+.overlay >h1:hover {
+  opacity: 0%;
+  transition: 1s;
 }

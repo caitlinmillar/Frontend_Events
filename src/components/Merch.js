@@ -24,42 +24,42 @@ const Merch = ({theme}) => {
 
         <div class="container-fluid px-0">
             <div class="row g-0">
-                <div class="col-lg-6 vh-100 bg-light">
-                    <div class="vh-100 bg">
-                        <img src={pic1} />
+                <div class="col-lg-6 vh-100">
+                    <div class="vh-100" >
+                        <img src={pic5} />
                     </div>
                 </div>
-                <div class="col-lg-6 vh-100 bg-dark">
-                    <div class="vh-100 bg-warning">
+                <div class="col-lg-6 vh-100">
+                    <div class="vh-100">
+                        <img src={pic6}/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-lg-6 vh-100 ">
+                    <div class="vh-100">
+                        <img src={pic1}/>
                         <img src={pic2}/>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid px-0">
-            <div class="row g-0">
-                <div class="col-lg-6 vh-100 bg-light">
-                    <div class="vh-100 bg">
+                <div class="col-lg-6 vh-100 ">
+                    <div class="vh-100">
+                        <img src={pic4}/>
                         <img src={pic3}/>
                     </div>
                 </div>
-                <div class="col-lg-6 vh-100 bg-dark">
-                    <div class="vh-100 bg-warning">
-                        <img src={pic4}/>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="container-fluid px-0">
             <div class="row g-0">
-                <div class="col-lg-6 vh-100 bg-light">
-                    <div class="vh-100 bg">
-                        <img src={pic5}/>
+                <div class={`col-lg-6 vh-100 bg-${theme}`}>
+                    <div class="vh-100">
                     </div>
                 </div>
-                <div class="col-lg-6 vh-100 bg-dark">
-                    <div class="vh-100 bg-warning">
-                        <img src={pic6}/>
+                <div class={`col-lg-6 vh-100 bg-${theme}`}>
+                    <div class="vh-100 ">
                     </div>
                 </div>
             </div>
