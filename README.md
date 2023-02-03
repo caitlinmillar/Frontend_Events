@@ -25,9 +25,7 @@ On the my profile page, the user is able to see the events they are currently si
 
 
 ## Component Diagram
-
-Component diagram goes here
-<img alt="the component diagram for planning our website/>
+![Untitled Diagram](https://user-images.githubusercontent.com/110283546/216561901-db7a5867-b03b-4597-a0ae-078fcfd2616c.jpg)
 
 When we first planned the MVP we created 2 containers - one each for the users and events. However, upon coding, we discovered we needed two more containers to handle a single user (for the my profile page) and a single event (for each event card).
 
