@@ -60,6 +60,7 @@ Several extensions were completed. Including:
 - Hover feature on event cards
 - Adding a map to each event
 - Adding a calendar to each event
+- A drop-down menu of events
 - Pop-up functionality on the login and registration buttons
 - Adding CSS to the My Profile page
 - Accessibility features: Dark Mode (for photo sensitivity) & Tritanopia filter (for red-green colour blindness)
