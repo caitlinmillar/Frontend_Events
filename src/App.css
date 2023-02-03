@@ -49,18 +49,32 @@
 } 
 
 .logodark, .logolight {
-  translate: -10px;
+  translate: 90px;
   transform: scale(0.5);
 }
 
 /* NavBar buttons */
 .toggle {
-  translate: 100px 15px;
+  translate: 210px 15px;
 }
 
 .profile {
-  color: aliceblue;
-  justify-content: space-evenly;
+background-color: rgb(156, 208, 254);
+border-radius: 10px;
+margin-bottom: 7px;
+translate: 100px;
+}
+
+.register {
+  border-color: #0a121c;
+  margin-right: 5px;
+  translate: 100px;
+}
+.open-login {
+  border-color: #0a121c;
+  margin-left: 5px;
+  translate: 100px;
+
 }
 
 /* Featured event sections */
@@ -290,10 +304,49 @@ filter: contrast(75%);
 .merchdark, .merchlight {
   display: flex;
   flex-wrap: wrap;
-  color: #ffda60;
+  color: #ffe9a0;
+}
+
+.merchdark h1, .merchlight h1 {
+  margin: 10px;
+}
+
+.merchdark img, .merchlight img {
+  border-radius: 100px;
+  transform: scale(0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.merchdark {
+  background: linear-gradient(90deg, #18416f 0%, #0a121c 100%);
+
+}
+
+.merchlight {
   background: linear-gradient(90deg, #4099fe 0%, #bddcff 100%);
 }
 
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay>h1 {
+  position: absolute;
+  z-index: 1;
+  background-color: #e3bd6961;
+  border-radius: 10px;
+  padding: 10px;
+  filter: drop-shadow(1px 16px 30px rgb(242, 246, 131));
+}
+
+.overlay >h1:hover {
+  opacity: 0%;
+  transition: 1s;
+}
 .merch img {
   /* border-radius: 10px; */
   height: 500px;
@@ -304,4 +357,3 @@ h3 >a{
   justify-content: center;
   zoom: 0.9;
 }
-

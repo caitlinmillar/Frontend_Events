@@ -45,6 +45,7 @@ AntDesign - React UI library
 Installation of ReactJS and external libraries were done in the terminal
 
 `create-react-app Frontend_Events`
+`npm install react-router-dom@6`
 - To create react app
 
 `npm install react react-dom leaflet
@@ -53,6 +54,10 @@ npm install react-leaflet`
 
 `npm i antd`
 - To install AntDesign
+
+`npm i @fortawesome/fontawesome-free`
+`npm i mdb-react-ui-kit`
+- To install fonts and MDB Bootstrap 
 
 ## Completed Extensions
 

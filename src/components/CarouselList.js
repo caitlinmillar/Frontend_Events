@@ -25,10 +25,6 @@ const contentStyle = {
 
 const CarouselList = () => {
 
-    // const carouselMap = events.slice(0, 4).map((event, id) => {
-    // return <Event event = {event} key={id} name = {event.eventName}/>
-    // })
-    
     const onChange = (currentSlide) => {
         console.log(currentSlide);
     }
