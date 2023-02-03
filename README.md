@@ -93,7 +93,7 @@ And load it up on http://localhost:3000.
 
 You will also need to git clone the API repo and create a database in the terminal to run the backend API.
 
-Here is a link to the backend API - https://github.com/rimmderes/EventsCalenderProject for you to clone.
+Here is a link to the backend API - https://github.com/rimmderes/EventsCalenderProject for you to clone and follow their installation instructions.
 
 ## Thank you
 
